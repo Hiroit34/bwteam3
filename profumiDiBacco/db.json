@@ -1,0 +1,93 @@
+{
+  "users": [],
+  "wines": [
+    {
+      "nome": "Brunello di Montalcino",
+      "annata": 2015,
+      "provenienza": "Toscana",
+      "tipo": "rosso",
+      "prezzo": 59.99,
+      "casa_vinicola": "Banfi",
+      "casa_vinicola_url": "https://www.banfi.it/",
+      "immagine_url": "https://www.google.com/search?q=Brunello+di+Montalcino+wine&tbm=isch",
+      "descrizione": "Brunello di Montalcino è uno dei vini rossi più rinomati d'Italia. Prodotto nella regione della Toscana, è famoso per la sua eleganza, complessità e longevità. Ha un colore rubino intenso, aromi fruttati e speziati, e un gusto robusto con tannini ben integrati."
+    },
+    {
+      "nome": "Amarone della Valpolicella",
+      "annata": 2016,
+      "provenienza": "Veneto",
+      "tipo": "rosso",
+      "prezzo": 79.99,
+      "casa_vinicola": "Masi",
+      "casa_vinicola_url": "https://www.masi.it/",
+      "immagine_url": "https://www.google.com/search?q=Amarone+della+Valpolicella+wine&tbm=isch",
+      "descrizione": "L'Amarone della Valpolicella è un vino rosso italiano di grande prestigio. Prodotto nella regione del Veneto, è caratterizzato da un processo di appassimento delle uve che conferisce al vino un sapore ricco e complesso, con note di frutta matura, spezie e un caratteristico retrogusto amarognolo."
+    },
+    {
+      "nome": "Chardonnay",
+      "annata": 2018,
+      "provenienza": "Lombardia",
+      "tipo": "bianco",
+      "prezzo": 29.99,
+      "casa_vinicola": "Ca' del Bosco",
+      "casa_vinicola_url": "https://www.cadelbosco.com/",
+      "immagine_url": "https://www.google.com/search?q=Chardonnay+wine&tbm=isch",
+      "descrizione": "Il Chardonnay è uno dei vitigni bianchi più conosciuti al mondo, e la sua espressione in Lombardia è eccezionale. Questo vino bianco è caratterizzato da un colore giallo dorato, aromi complessi di frutta tropicale e vaniglia, e un gusto ricco e burroso."
+    },
+    {
+      "nome": "Barbaresco",
+      "annata": 2014,
+      "provenienza": "Piemonte",
+      "tipo": "rosso",
+      "prezzo": 69.99,
+      "casa_vinicola": "Gaja",
+      "casa_vinicola_url": "https://www.gaja.com/",
+      "immagine_url": "https://www.google.com/search?q=Barbaresco+wine&tbm=isch",
+      "descrizione": "Il Barbaresco è un vino rosso di prestigio prodotto nella regione del Piemonte. Ottenuto dal vitigno Nebbiolo, ha un colore rubino intenso, un bouquet complesso di frutti di bosco, rose e spezie, e un gusto armonioso con tannini morbidi e persistenza."
+    },
+    {
+      "nome": "Vermentino di Sardegna",
+      "annata": 2020,
+      "provenienza": "Sardegna",
+      "tipo": "bianco",
+      "prezzo": 17.99,
+      "casa_vinicola": "Argiolas",
+      "casa_vinicola_url": "https://www.argiolas.it/",
+      "immagine_url": "https://www.google.com/search?q=Vermentino+di+Sardegna+wine&tbm=isch",
+      "descrizione": "Il Vermentino di Sardegna è un vino bianco fresco e vivace che rappresenta al meglio il carattere mediterraneo dell'isola. Caratterizzato da un colore paglierino, offre aromi di frutta bianca e agrumi, con una piacevole mineralità e freschezza al palato."
+    },
+    {
+      "nome": "Soave",
+      "annata": 2019,
+      "provenienza": "Veneto",
+      "tipo": "bianco",
+      "prezzo": 12.99,
+      "casa_vinicola": "Pieropan",
+      "casa_vinicola_url": "https://www.pieropan.it/",
+      "immagine_url": "https://www.google.com/search?q=Soave+wine&tbm=isch",
+      "descrizione": "Lo Soave è uno dei vini bianchi più famosi del Veneto. Prodotto principalmente con il vitigno Garganega, ha un colore giallo paglierino, aromi di fiori bianchi e agrumi, e un gusto fresco, equilibrato e leggermente frizzante."
+    },
+    {
+      "nome": "Barbera d'Asti",
+      "annata": 2017,
+      "provenienza": "Piemonte",
+      "tipo": "rosso",
+      "prezzo": 14.99,
+      "casa_vinicola": "Vietti",
+      "casa_vinicola_url": "https://vietti.com/",
+      "immagine_url": "https://www.google.com/search?q=Barbera+d%27Asti+wine&tbm=isch",
+      "descrizione": "La Barbera d'Asti è un vino rosso del Piemonte apprezzato per la sua freschezza e versatilità. Dal colore rubino intenso, offre aromi di frutta rossa e spezie, con un gusto vivace e acidità bilanciata."
+    },
+    {
+      "nome": "Gavi di Gavi",
+      "annata": 2018,
+      "provenienza": "Piemonte",
+      "tipo": "bianco",
+      "prezzo": 21.99,
+      "casa_vinicola": "La Scolca",
+      "casa_vinicola_url": "https://www.lascolca.it/",
+      "immagine_url": "https://www.google.com/search?q=Gavi+di+Gavi+wine&tbm=isch",
+      "descrizione": "Il Gavi di Gavi è un vino bianco di grande eleganza"
+    }
+  ]
+}

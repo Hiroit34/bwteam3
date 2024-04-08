@@ -16,6 +16,6 @@ export class HomeComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.wines = this.http.get<IWine[]>(environment.winesUrl);
+    this.wines = this.http.get<IWine[]>('http://localhost:3000/wines');
   }
 }

@@ -73,6 +73,83 @@
       "descrizione": "Il Vermentino di Sardegna è un vino bianco fresco e vivace che rappresenta al meglio il carattere mediterraneo dell'isola. Caratterizzato da un colore paglierino, offre aromi di frutta bianca e agrumi, con una piacevole mineralità e freschezza al palato."
     },
     {
+      "nome": "Barbera d'Asti",
+      "annata": 2017,
+      "provenienza": "Piemonte",
+      "tipo": "rosso",
+      "prezzo": 24.99,
+      "casa_vinicola": "Vietti",
+      "casa_vinicola_url": "https://www.vietti.com/",
+      "immagine_url": "https://www.google.com/search?q=Barbera+d%27Asti+wine&tbm=isch",
+      "descrizione": "La Barbera d'Asti è un vino rosso piemontese dal carattere fruttato e fresco. Ha un colore rubino intenso, profumi di ciliegie e frutti di bosco, e un gusto vivace e leggermente acidulo."
+    },
+    {
+      "nome": "Soave Classico",
+      "annata": 2019,
+      "provenienza": "Veneto",
+      "tipo": "bianco",
+      "prezzo": 19.99,
+      "casa_vinicola": "Pieropan",
+      "casa_vinicola_url": "https://www.pieropan.it/",
+      "immagine_url": "https://www.google.com/search?q=Soave+Classico+wine&tbm=isch",
+      "descrizione": "Lo Soave Classico è un vino bianco fresco e aromatico del Veneto, perfetto per accompagnare piatti leggeri. Ha un colore giallo paglierino, profumi di fiori bianchi e agrumi, e un gusto fresco e persistente."
+    },
+    {
+      "nome": "Primitivo di Manduria",
+      "annata": 2018,
+      "provenienza": "Puglia",
+      "tipo": "rosso",
+      "prezzo": 29.99,
+      "casa_vinicola": "Tormaresca",
+      "casa_vinicola_url": "https://www.tormaresca.it/",
+      "immagine_url": "https://www.google.com/search?q=Primitivo+di+Manduria+wine&tbm=isch",
+      "descrizione": "Il Primitivo di Manduria è un vino rosso intenso e avvolgente della Puglia, caratterizzato da note di frutta matura e spezie. Ha un colore rosso rubino profondo, aromi di prugne e cannella, e un gusto morbido e persistente."
+    },
+    {
+      "nome": "Verdicchio dei Castelli di Jesi",
+      "annata": 2020,
+      "provenienza": "Marche",
+      "tipo": "bianco",
+      "prezzo": 17.99,
+      "casa_vinicola": "Umani Ronchi",
+      "casa_vinicola_url": "https://www.umanironchi.com/",
+      "immagine_url": "https://www.google.com/search?q=Verdicchio+dei+Castelli+di+Jesi+wine&tbm=isch",
+      "descrizione": "Il Verdicchio dei Castelli di Jesi è un vino bianco fresco e minerale delle Marche, ideale per accompagnare piatti di pesce. Ha un colore giallo paglierino, profumi di fiori bianchi e agrumi, e un gusto secco e persistente."
+    },
+    {
+      "nome": "Cannonau di Sardegna",
+      "annata": 2016,
+      "provenienza": "Sardegna",
+      "tipo": "rosso",
+      "prezzo": 27.99,
+      "casa_vinicola": "Sella & Mosca",
+      "casa_vinicola_url": "https://www.sellaemosca.com/",
+      "immagine_url": "https://www.google.com/search?q=Cannonau+di+Sardegna+wine&tbm=isch",
+      "descrizione": "Il Cannonau di Sardegna è un vino rosso robusto e strutturato, con profumi intensi di frutti di bosco e spezie. Ha un colore rosso rubino intenso, aromi di ciliegie mature e pepe nero, e un gusto pieno e persistente."
+    },
+    {
+      "nome": "Ribolla Gialla",
+      "annata": 2018,
+      "provenienza": "Friuli-Venezia Giulia",
+      "tipo": "bianco",
+      "prezzo": 22.99,
+      "casa_vinicola": "Gravner",
+      "casa_vinicola_url": "https://www.gravner.it/",
+      "immagine_url": "https://www.google.com/search?q=Ribolla+Gialla+wine&tbm=isch",
+      "descrizione": "La Ribolla Gialla è un vino bianco fresco e sapido del Friuli-Venezia Giulia, perfetto da gustare come aperitivo. Ha un colore giallo paglierino, profumi di agrumi e fiori bianchi, e un gusto secco e minerale."
+    },
+    {
+      "nome": "Greco di Tufo",
+      "annata": 2019,
+      "provenienza": "Campania",
+      "tipo": "bianco",
+      "prezzo": 26.99,
+      "casa_vinicola": "Mastroberardino",
+      "casa_vinicola_url": "https://www.mastroberardino.com/",
+      "immagine_url": "https://www.google.com/search?q=Greco+di+Tufo+wine&tbm=isch",
+      "descrizione": "Il Greco di Tufo è un vino bianco complesso e aromatico della Campania, con un caratteristico gusto minerale. Ha un colore giallo dorato, profumi di pesca bianca e fiori di campo, e un gusto pieno e avvolgente."
+    },
+    {
       "nome": "Soave",
       "annata": 2019,
       "provenienza": "Veneto",

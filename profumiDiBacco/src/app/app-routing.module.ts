@@ -33,6 +33,8 @@ const routes: Routes = [
     path: 'faq',
     component: FaqComponent
   },
+  { path: 'edit', loadChildren: () => import('./pages/edit/edit.module').then(m => m.EditModule) },
+  { path: 'create', loadChildren: () => import('./pages/create/create.module').then(m => m.CreateModule) },
 ];
 
 @NgModule({

@@ -12,6 +12,7 @@ import { FooterComponent } from './main-components/footer/footer.component';
 import { WineCardComponent } from './main-components/wine-card/wine-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddWineComponent } from './main-components/add-wine/add-wine.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     FaqComponent,
     HeaderComponent,
     FooterComponent,
-    WineCardComponent
+    WineCardComponent,
+    AddWineComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     FormsModule,
     HttpClientModule
- ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

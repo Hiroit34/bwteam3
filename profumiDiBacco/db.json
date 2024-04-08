@@ -1,5 +1,21 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "fede26@gmail.com",
+      "password": "$2a$10$4UOBhZseTX3fPLH6HTTZhuYpBOYcy/IcF31Bu3a/X84mZPkuKLBvy",
+      "nome": "Federico",
+      "cognome": "Massaccesi",
+      "vendorOrNot": true,
+      "id": 1
+    },
+    {
+      "email": "fede99@gmail.com",
+      "password": "$2a$10$x13YrtqPJmI9wPCf.mr6DuO6T1QeDCcdPGpzpQ4y15UH7mdrhdm6G",
+      "nome": "Federico",
+      "cognome": "Massaccesi",
+      "id": 2
+    }
+  ],
   "wines": [
     {
       "nome": "Brunello di Montalcino",

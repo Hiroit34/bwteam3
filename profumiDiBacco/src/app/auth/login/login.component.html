@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div class="container">
+  <form>
+    <input type="email" [(ngModel)]="loginData.email" name="email" class="col-3 mt-3" placeholder="Email" />
+    <div *ngIf="submitted && !loginData.email" class="alert alert-danger" role="alert">Il campo Email è obbligatorio.</div>
+
+    <input type="password" [(ngModel)]="loginData.password" name="password" class="col-3 my-4" placeholder="Password" />
+    <div *ngIf="submitted && !loginData.password" class="alert alert-danger" role="alert">Il campo Password è obbligatorio.</div>
+
+    <button (click)="signIn()" class="col-1 btn btn-warning">Accedi</button>
+  </form>
+</div>

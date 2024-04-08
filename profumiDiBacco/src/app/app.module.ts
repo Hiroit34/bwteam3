@@ -10,6 +10,8 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { HeaderComponent } from './main-components/header/header.component';
 import { FooterComponent } from './main-components/footer/footer.component';
 import { WineCardComponent } from './main-components/wine-card/wine-card.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { WineCardComponent } from './main-components/wine-card/wine-card.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
-  ],
+    NgbModule,
+    FormsModule,
+    HttpClientModule
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })

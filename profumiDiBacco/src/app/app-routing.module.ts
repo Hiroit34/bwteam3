@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContattiComponent } from './pages/contatti/contatti.component';
 import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
 import { FaqComponent } from './pages/faq/faq.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -12,7 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule)
+    loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule),
+    canActivate:[AuthGuard],
+    canActivateChild:[AuthGuard]
   },
   {
     path: 'auth',

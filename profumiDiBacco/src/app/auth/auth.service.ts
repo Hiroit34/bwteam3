@@ -42,6 +42,8 @@ export class AuthService {
       tap((data) => {
         this.authSubject.next(data.user);
         localStorage.setItem('accessData', JSON.stringify(data));
+        localStorage.setItem('infoUser',JSON.stringify(data.user))
+
 
         this.autoLogout(data.accessToken);
       })
@@ -52,7 +54,7 @@ export class AuthService {
     this.authSubject.next(null);
     localStorage.removeItem('accessData');
 
-    this.router.navigate(['/auth/login']);
+    this.router.navigate(['/']);
   }
 
   getAccessToken(): string {

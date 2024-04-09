@@ -29,6 +29,7 @@
                       <p *ngIf="user?.vendorOrNot" class="text-muted">Presso: {{user?.sedeLegale}}</p>
                       <p *ngIf="user?.vendorOrNot" class="text-muted">Nome Cantina: {{user?.nomeAzienda}}</p>
                     </div>
+                    <button *ngIf="vendor" class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
                   </div>
                 </div>
               </div>
@@ -41,4 +42,32 @@
   <section>
     <h3 class="mt-5">Preferiti:</h3>
   </section>
+
+  <!-- <app-wine-card *ngFor="let item of list" [wine]="wine"></app-wine-card> -->
 </div>
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form>
+
+      <!-- <input type="text" [(ngModel)]="" placeholder="">
+      <input type="number" [(ngModel)]="" placeholder="">
+      <input type="text" [(ngModel)]="" placeholder="">
+      <input type="text" [(ngModel)]="" placeholder="">
+      <input type="number" [(ngModel)]="" placeholder="">
+      <input type="text" [(ngModel)]="" placeholder="">
+      <input type="text" [(ngModel)]="" placeholder="">
+      <input type="text" [(ngModel)]="" placeholder="">
+      <input type="text" [(ngModel)]="" placeholder=""> -->
+
+
+
+    </form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="c()">Aggiungi prodotto</button>
+	</div>
+</ng-template>

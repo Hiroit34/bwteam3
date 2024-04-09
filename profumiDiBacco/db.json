@@ -25,6 +25,13 @@
       "pIva": "123445676",
       "sedeLegale": "Via dei bevitori 12",
       "id": 3
+    },
+    {
+      "email": "mariouser@email.com",
+      "password": "$2a$10$oLcPXEMMCVVnXSYaVIj6s.4lTAsWX1Rn/p0qdNEnmdXJbrmOSjPOu",
+      "nome": "mario",
+      "cognome": "mari",
+      "id": 4
     }
   ],
   "wines": [

@@ -18,6 +18,7 @@
   ],
   "wines": [
     {
+      "id" : 1,
       "nome": "Brunello di Montalcino",
       "annata": 2015,
       "provenienza": "Toscana",
@@ -29,6 +30,7 @@
       "descrizione": "Brunello di Montalcino è uno dei vini rossi più rinomati d'Italia. Prodotto nella regione della Toscana, è famoso per la sua eleganza, complessità e longevità. Ha un colore rubino intenso, aromi fruttati e speziati, e un gusto robusto con tannini ben integrati."
     },
     {
+      "id" : 2,
       "nome": "Amarone della Valpolicella",
       "annata": 2016,
       "provenienza": "Veneto",
@@ -40,6 +42,7 @@
       "descrizione": "L'Amarone della Valpolicella è un vino rosso italiano di grande prestigio. Prodotto nella regione del Veneto, è caratterizzato da un processo di appassimento delle uve che conferisce al vino un sapore ricco e complesso, con note di frutta matura, spezie e un caratteristico retrogusto amarognolo."
     },
     {
+      "id" : 3,
       "nome": "Chardonnay",
       "annata": 2018,
       "provenienza": "Lombardia",
@@ -51,6 +54,7 @@
       "descrizione": "Il Chardonnay è uno dei vitigni bianchi più conosciuti al mondo, e la sua espressione in Lombardia è eccezionale. Questo vino bianco è caratterizzato da un colore giallo dorato, aromi complessi di frutta tropicale e vaniglia, e un gusto ricco e burroso."
     },
     {
+      "id" : 4,
       "nome": "Barbaresco",
       "annata": 2014,
       "provenienza": "Piemonte",
@@ -62,6 +66,7 @@
       "descrizione": "Il Barbaresco è un vino rosso di prestigio prodotto nella regione del Piemonte. Ottenuto dal vitigno Nebbiolo, ha un colore rubino intenso, un bouquet complesso di frutti di bosco, rose e spezie, e un gusto armonioso con tannini morbidi e persistenza."
     },
     {
+      "id" : 5,
       "nome": "Vermentino di Sardegna",
       "annata": 2020,
       "provenienza": "Sardegna",
@@ -73,6 +78,7 @@
       "descrizione": "Il Vermentino di Sardegna è un vino bianco fresco e vivace che rappresenta al meglio il carattere mediterraneo dell'isola. Caratterizzato da un colore paglierino, offre aromi di frutta bianca e agrumi, con una piacevole mineralità e freschezza al palato."
     },
     {
+      "id" : 6,
       "nome": "Barbera d'Asti",
       "annata": 2017,
       "provenienza": "Piemonte",
@@ -84,6 +90,7 @@
       "descrizione": "La Barbera d'Asti è un vino rosso piemontese dal carattere fruttato e fresco. Ha un colore rubino intenso, profumi di ciliegie e frutti di bosco, e un gusto vivace e leggermente acidulo."
     },
     {
+      "id" : 7,
       "nome": "Soave Classico",
       "annata": 2019,
       "provenienza": "Veneto",
@@ -95,6 +102,7 @@
       "descrizione": "Lo Soave Classico è un vino bianco fresco e aromatico del Veneto, perfetto per accompagnare piatti leggeri. Ha un colore giallo paglierino, profumi di fiori bianchi e agrumi, e un gusto fresco e persistente."
     },
     {
+      "id" : 8,
       "nome": "Primitivo di Manduria",
       "annata": 2018,
       "provenienza": "Puglia",
@@ -106,6 +114,7 @@
       "descrizione": "Il Primitivo di Manduria è un vino rosso intenso e avvolgente della Puglia, caratterizzato da note di frutta matura e spezie. Ha un colore rosso rubino profondo, aromi di prugne e cannella, e un gusto morbido e persistente."
     },
     {
+      "id" : 9,
       "nome": "Verdicchio dei Castelli di Jesi",
       "annata": 2020,
       "provenienza": "Marche",
@@ -117,6 +126,7 @@
       "descrizione": "Il Verdicchio dei Castelli di Jesi è un vino bianco fresco e minerale delle Marche, ideale per accompagnare piatti di pesce. Ha un colore giallo paglierino, profumi di fiori bianchi e agrumi, e un gusto secco e persistente."
     },
     {
+      "id" : 10,
       "nome": "Cannonau di Sardegna",
       "annata": 2016,
       "provenienza": "Sardegna",
@@ -128,6 +138,7 @@
       "descrizione": "Il Cannonau di Sardegna è un vino rosso robusto e strutturato, con profumi intensi di frutti di bosco e spezie. Ha un colore rosso rubino intenso, aromi di ciliegie mature e pepe nero, e un gusto pieno e persistente."
     },
     {
+      "id" : 11,
       "nome": "Ribolla Gialla",
       "annata": 2018,
       "provenienza": "Friuli-Venezia Giulia",
@@ -139,6 +150,7 @@
       "descrizione": "La Ribolla Gialla è un vino bianco fresco e sapido del Friuli-Venezia Giulia, perfetto da gustare come aperitivo. Ha un colore giallo paglierino, profumi di agrumi e fiori bianchi, e un gusto secco e minerale."
     },
     {
+      "id" : 12,
       "nome": "Greco di Tufo",
       "annata": 2019,
       "provenienza": "Campania",
@@ -150,6 +162,7 @@
       "descrizione": "Il Greco di Tufo è un vino bianco complesso e aromatico della Campania, con un caratteristico gusto minerale. Ha un colore giallo dorato, profumi di pesca bianca e fiori di campo, e un gusto pieno e avvolgente."
     },
     {
+      "id" : 13,
       "nome": "Soave",
       "annata": 2019,
       "provenienza": "Veneto",
@@ -161,6 +174,7 @@
       "descrizione": "Lo Soave è uno dei vini bianchi più famosi del Veneto. Prodotto principalmente con il vitigno Garganega, ha un colore giallo paglierino, aromi di fiori bianchi e agrumi, e un gusto fresco, equilibrato e leggermente frizzante."
     },
     {
+      "id" : 14,
       "nome": "Barbera d'Asti",
       "annata": 2017,
       "provenienza": "Piemonte",
@@ -172,6 +186,7 @@
       "descrizione": "La Barbera d'Asti è un vino rosso del Piemonte apprezzato per la sua freschezza e versatilità. Dal colore rubino intenso, offre aromi di frutta rossa e spezie, con un gusto vivace e acidità bilanciata."
     },
     {
+      "id" : 15,
       "nome": "Gavi di Gavi",
       "annata": 2018,
       "provenienza": "Piemonte",

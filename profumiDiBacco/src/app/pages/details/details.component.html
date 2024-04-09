@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-6">
       <img
-        [src]="{{wine.immagine_url}}"
+        [src]="wine.immagine_url"
         class="img-fluid"
         alt="{{ wine.nome }}"
       />
@@ -20,7 +20,7 @@
           <a href="{{ wine.casa_vinicola_url }}">{{ wine.casa_vinicola }}</a>
         </li>
       </ul>
-      <button class="btn btn-primary" (click)="addToCart()">
+      <button class="btn btn-primary">
         Aggiungi al carrello
       </button>
     </div>

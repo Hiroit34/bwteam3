@@ -14,10 +14,22 @@
       "nome": "Federico",
       "cognome": "Massaccesi",
       "id": 2
+    },
+    {
+      "email": "luigi@email.it",
+      "password": "$2a$10$h/CuP8rS2oIaIvG1VF9wI.0EGr9hvc.MvMXRjrWxxJvrFouBrhK2y",
+      "vendorOrNot": true,
+      "nome": "Luigi",
+      "cognome": "Guajana",
+      "nomeAzienda": "Bevo",
+      "pIva": "123445676",
+      "sedeLegale": "Via dei bevitori 12",
+      "id": 3
     }
   ],
   "wines": [
     {
+      "id": 1,
       "nome": "Brunello di Montalcino",
       "annata": 2015,
       "provenienza": "Toscana",
@@ -25,10 +37,11 @@
       "prezzo": 59.99,
       "casa_vinicola": "Banfi",
       "casa_vinicola_url": "https://www.banfi.it/",
-      "immagine_url": "https://www.google.com/search?q=Brunello+di+Montalcino+wine&tbm=isch",
-      "descrizione": "Brunello di Montalcino è uno dei vini rossi più rinomati d'Italia. Prodotto nella regione della Toscana, è famoso per la sua eleganza, complessità e longevità. Ha un colore rubino intenso, aromi fruttati e speziati, e un gusto robusto con tannini ben integrati."
+      "immagine_url": "https://banfiit.cdn-immedia.net/upload/assets/files/1944,-1,1242/1429-3.png",
+      "descrizione": "Il Brunello di Montalcino è un vino rosso italiano rinomato, prodotto nella regione della Toscana. È noto per il suo colore rubino intenso e il gusto complesso, che offre sfumature di frutti rossi, spezie e note terrose. Ha un corpo pieno e un'elegante struttura tannica."
     },
     {
+      "id": 2,
       "nome": "Amarone della Valpolicella",
       "annata": 2016,
       "provenienza": "Veneto",
@@ -36,10 +49,11 @@
       "prezzo": 79.99,
       "casa_vinicola": "Masi",
       "casa_vinicola_url": "https://www.masi.it/",
-      "immagine_url": "https://www.google.com/search?q=Amarone+della+Valpolicella+wine&tbm=isch",
+      "immagine_url": "https://data.negoziodelvino.it/imgprodotto/amarone-della-valpolicella-classico-costasera-2016-docg_10040.jpg",
       "descrizione": "L'Amarone della Valpolicella è un vino rosso italiano di grande prestigio. Prodotto nella regione del Veneto, è caratterizzato da un processo di appassimento delle uve che conferisce al vino un sapore ricco e complesso, con note di frutta matura, spezie e un caratteristico retrogusto amarognolo."
     },
     {
+      "id": 3,
       "nome": "Chardonnay",
       "annata": 2018,
       "provenienza": "Lombardia",
@@ -47,10 +61,11 @@
       "prezzo": 29.99,
       "casa_vinicola": "Ca' del Bosco",
       "casa_vinicola_url": "https://www.cadelbosco.com/",
-      "immagine_url": "https://www.google.com/search?q=Chardonnay+wine&tbm=isch",
-      "descrizione": "Il Chardonnay è uno dei vitigni bianchi più conosciuti al mondo, e la sua espressione in Lombardia è eccezionale. Questo vino bianco è caratterizzato da un colore giallo dorato, aromi complessi di frutta tropicale e vaniglia, e un gusto ricco e burroso."
+      "immagine_url": "https://lieblings-weine.de/wp-content/uploads/2018/01/ca_del_bosco_chardonnay_lieblings-weine.de_.jpg",
+      "descrizione": "Il Chardonnay è un vino bianco classico, apprezzato per la sua versatilità e raffinatezza. Originario della Borgogna, presenta note fruttate e floreali, accompagnate da una piacevole freschezza e una leggera cremosità. Ideale per accompagnare piatti di pesce e pollame."
     },
     {
+      "id": 4,
       "nome": "Barbaresco",
       "annata": 2014,
       "provenienza": "Piemonte",
@@ -58,10 +73,11 @@
       "prezzo": 69.99,
       "casa_vinicola": "Gaja",
       "casa_vinicola_url": "https://www.gaja.com/",
-      "immagine_url": "https://www.google.com/search?q=Barbaresco+wine&tbm=isch",
-      "descrizione": "Il Barbaresco è un vino rosso di prestigio prodotto nella regione del Piemonte. Ottenuto dal vitigno Nebbiolo, ha un colore rubino intenso, un bouquet complesso di frutti di bosco, rose e spezie, e un gusto armonioso con tannini morbidi e persistenza."
+      "immagine_url": "https://hedonism.co.uk/sites/default/files/vintner/vintner-images/HED92706.JPG",
+      "descrizione": "Il Barbaresco del Piemonte è un vino rosso elegante e complesso, prodotto con uve Nebbiolo nella regione delle Langhe. Presenta un colore rubino intenso e offre un bouquet di frutti rossi, spezie e note floreali. Ha una struttura tannica robusta e un lungo e persistente finale."
     },
     {
+      "id": 5,
       "nome": "Vermentino di Sardegna",
       "annata": 2020,
       "provenienza": "Sardegna",
@@ -69,10 +85,11 @@
       "prezzo": 17.99,
       "casa_vinicola": "Argiolas",
       "casa_vinicola_url": "https://www.argiolas.it/",
-      "immagine_url": "https://www.google.com/search?q=Vermentino+di+Sardegna+wine&tbm=isch",
-      "descrizione": "Il Vermentino di Sardegna è un vino bianco fresco e vivace che rappresenta al meglio il carattere mediterraneo dell'isola. Caratterizzato da un colore paglierino, offre aromi di frutta bianca e agrumi, con una piacevole mineralità e freschezza al palato."
+      "immagine_url": "https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_6c3c0ad7-012e-42c2-90ff-d3d48ada5ef1.png",
+      "descrizione": "Il Vermentino di Sardegna è un vino bianco fresco e vibrante, tipico della regione sarda. Caratterizzato da un colore paglierino brillante, sprigiona aromi di agrumi, fiori bianchi e erbe aromatiche. Al palato offre una piacevole acidità, con un finale persistente e minerale."
     },
     {
+      "id": 6,
       "nome": "Barbera d'Asti",
       "annata": 2017,
       "provenienza": "Piemonte",
@@ -80,10 +97,11 @@
       "prezzo": 24.99,
       "casa_vinicola": "Vietti",
       "casa_vinicola_url": "https://www.vietti.com/",
-      "immagine_url": "https://www.google.com/search?q=Barbera+d%27Asti+wine&tbm=isch",
-      "descrizione": "La Barbera d'Asti è un vino rosso piemontese dal carattere fruttato e fresco. Ha un colore rubino intenso, profumi di ciliegie e frutti di bosco, e un gusto vivace e leggermente acidulo."
+      "immagine_url": "https://www.vietti.com/wp-content/uploads/barbera-asti-tre-vigne-vietti.jpg",
+      "descrizione": "La Barbera d'Asti è un vino rosso robusto e fruttato, prodotto nella regione del Piemonte. Di colore rosso rubino intenso, offre un bouquet di frutti rossi maturi e spezie. Al palato è pieno e avvolgente, con tannini morbidi e una piacevole freschezza."
     },
     {
+      "id": 7,
       "nome": "Soave Classico",
       "annata": 2019,
       "provenienza": "Veneto",
@@ -91,10 +109,11 @@
       "prezzo": 19.99,
       "casa_vinicola": "Pieropan",
       "casa_vinicola_url": "https://www.pieropan.it/",
-      "immagine_url": "https://www.google.com/search?q=Soave+Classico+wine&tbm=isch",
-      "descrizione": "Lo Soave Classico è un vino bianco fresco e aromatico del Veneto, perfetto per accompagnare piatti leggeri. Ha un colore giallo paglierino, profumi di fiori bianchi e agrumi, e un gusto fresco e persistente."
+      "immagine_url": "https://cdn.shopify.com/s/files/1/2577/6436/products/Pieropan_SoaveClassico_2020_1200x.jpg?v=1621442984",
+      "descrizione": "Lo Soave Classico è un vino bianco del Veneto caratterizzato da un colore giallo paglierino brillante. Con aromi di fiori bianchi, frutta tropicale e mandorla, offre una piacevole freschezza e un gusto equilibrato. Ideale come aperitivo o accompagnamento a piatti di pesce."
     },
     {
+      "id": 8,
       "nome": "Primitivo di Manduria",
       "annata": 2018,
       "provenienza": "Puglia",
@@ -102,10 +121,11 @@
       "prezzo": 29.99,
       "casa_vinicola": "Tormaresca",
       "casa_vinicola_url": "https://www.tormaresca.it/",
-      "immagine_url": "https://www.google.com/search?q=Primitivo+di+Manduria+wine&tbm=isch",
-      "descrizione": "Il Primitivo di Manduria è un vino rosso intenso e avvolgente della Puglia, caratterizzato da note di frutta matura e spezie. Ha un colore rosso rubino profondo, aromi di prugne e cannella, e un gusto morbido e persistente."
+      "immagine_url": "https://images.vivino.com/thumbs/S6zp2tn4Qdy6IkgRrS1HDg_pb_x600.png",
+      "descrizione": "Il Primitivo di Manduria è un vino rosso intenso e corposo originario della regione italiana della Puglia. Caratterizzato da aromi di frutti neri maturi, spezie e vaniglia, presenta un gusto ricco e rotondo, con tannini morbidi e una piacevole persistenza."
     },
     {
+      "id": 9,
       "nome": "Verdicchio dei Castelli di Jesi",
       "annata": 2020,
       "provenienza": "Marche",
@@ -113,10 +133,11 @@
       "prezzo": 17.99,
       "casa_vinicola": "Umani Ronchi",
       "casa_vinicola_url": "https://www.umanironchi.com/",
-      "immagine_url": "https://www.google.com/search?q=Verdicchio+dei+Castelli+di+Jesi+wine&tbm=isch",
-      "descrizione": "Il Verdicchio dei Castelli di Jesi è un vino bianco fresco e minerale delle Marche, ideale per accompagnare piatti di pesce. Ha un colore giallo paglierino, profumi di fiori bianchi e agrumi, e un gusto secco e persistente."
+      "immagine_url": "https://data.negoziodelvino.it/imgprodotto/verdicchio-dei-castelli-di-jesi-classico-villa-bianchi-doc_13551.jpg",
+      "descrizione": "Il Verdicchio è un vino bianco italiano della regione delle Marche. Di colore giallo paglierino, offre un bouquet di agrumi, fiori bianchi e erbe aromatiche. Al palato è fresco e vivace, con una piacevole acidità e un finale persistente. Ideale con frutti di mare e piatti leggeri."
     },
     {
+      "id": 10,
       "nome": "Cannonau di Sardegna",
       "annata": 2016,
       "provenienza": "Sardegna",
@@ -124,10 +145,11 @@
       "prezzo": 27.99,
       "casa_vinicola": "Sella & Mosca",
       "casa_vinicola_url": "https://www.sellaemosca.com/",
-      "immagine_url": "https://www.google.com/search?q=Cannonau+di+Sardegna+wine&tbm=isch",
-      "descrizione": "Il Cannonau di Sardegna è un vino rosso robusto e strutturato, con profumi intensi di frutti di bosco e spezie. Ha un colore rosso rubino intenso, aromi di ciliegie mature e pepe nero, e un gusto pieno e persistente."
+      "immagine_url": "https://www.saq.com/media/catalog/product/4/2/425488-1_1593714366.png?width=367&height=550&canvas=367,550&quality=80&fit=bounds",
+      "descrizione": "Il Cannonau di Sardegna è un vino rosso robusto e complesso, tipico della Sardegna. Di colore rosso rubino intenso, sprigiona aromi di frutti rossi, spezie e note terrose. Al palato è pieno e avvolgente, con tannini morbidi e un finale persistente e piacevolmente speziato."
     },
     {
+      "id": 11,
       "nome": "Ribolla Gialla",
       "annata": 2018,
       "provenienza": "Friuli-Venezia Giulia",
@@ -135,10 +157,11 @@
       "prezzo": 22.99,
       "casa_vinicola": "Gravner",
       "casa_vinicola_url": "https://www.gravner.it/",
-      "immagine_url": "https://www.google.com/search?q=Ribolla+Gialla+wine&tbm=isch",
-      "descrizione": "La Ribolla Gialla è un vino bianco fresco e sapido del Friuli-Venezia Giulia, perfetto da gustare come aperitivo. Ha un colore giallo paglierino, profumi di agrumi e fiori bianchi, e un gusto secco e minerale."
+      "immagine_url": "https://enotecadelfrate.b-cdn.net/wp-content/uploads/2018/06/Gravner-Breg.png",
+      "descrizione": "La Ribolla Gialla è un vino bianco del Friuli-Venezia Giulia. Presenta un colore paglierino brillante e offre aromi di agrumi, pesca e fiori bianchi. Al palato è fresco, vivace e mineralo, con una piacevole acidità e un finale persistente e delicato."
     },
     {
+      "id": 12,
       "nome": "Greco di Tufo",
       "annata": 2019,
       "provenienza": "Campania",
@@ -146,41 +169,8 @@
       "prezzo": 26.99,
       "casa_vinicola": "Mastroberardino",
       "casa_vinicola_url": "https://www.mastroberardino.com/",
-      "immagine_url": "https://www.google.com/search?q=Greco+di+Tufo+wine&tbm=isch",
-      "descrizione": "Il Greco di Tufo è un vino bianco complesso e aromatico della Campania, con un caratteristico gusto minerale. Ha un colore giallo dorato, profumi di pesca bianca e fiori di campo, e un gusto pieno e avvolgente."
-    },
-    {
-      "nome": "Soave",
-      "annata": 2019,
-      "provenienza": "Veneto",
-      "tipo": "bianco",
-      "prezzo": 12.99,
-      "casa_vinicola": "Pieropan",
-      "casa_vinicola_url": "https://www.pieropan.it/",
-      "immagine_url": "https://www.google.com/search?q=Soave+wine&tbm=isch",
-      "descrizione": "Lo Soave è uno dei vini bianchi più famosi del Veneto. Prodotto principalmente con il vitigno Garganega, ha un colore giallo paglierino, aromi di fiori bianchi e agrumi, e un gusto fresco, equilibrato e leggermente frizzante."
-    },
-    {
-      "nome": "Barbera d'Asti",
-      "annata": 2017,
-      "provenienza": "Piemonte",
-      "tipo": "rosso",
-      "prezzo": 14.99,
-      "casa_vinicola": "Vietti",
-      "casa_vinicola_url": "https://vietti.com/",
-      "immagine_url": "https://www.google.com/search?q=Barbera+d%27Asti+wine&tbm=isch",
-      "descrizione": "La Barbera d'Asti è un vino rosso del Piemonte apprezzato per la sua freschezza e versatilità. Dal colore rubino intenso, offre aromi di frutta rossa e spezie, con un gusto vivace e acidità bilanciata."
-    },
-    {
-      "nome": "Gavi di Gavi",
-      "annata": 2018,
-      "provenienza": "Piemonte",
-      "tipo": "bianco",
-      "prezzo": 21.99,
-      "casa_vinicola": "La Scolca",
-      "casa_vinicola_url": "https://www.lascolca.it/",
-      "immagine_url": "https://www.google.com/search?q=Gavi+di+Gavi+wine&tbm=isch",
-      "descrizione": "Il Gavi di Gavi è un vino bianco di grande eleganza"
+      "immagine_url": "https://bilder.vinmonopolet.no/cache/1200x1200-0/4247001-1.jpg",
+      "descrizione": "Il Greco di Tufo è un vino bianco del Sud Italia, della regione della Campania. Con un colore giallo paglierino intenso, emana profumi di agrumi, fiori bianchi e mandorla. Al palato è fresco, sapido e persistente, con una piacevole mineralità e un elegante equilibrio."
     }
   ]
 }

@@ -1,28 +1,22 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6">
-      <img
-        [src]="wine.immagine_url"
-        class="img-fluid"
-        alt="{{ wine.nome }}"
-      />
+      <img [src]="wine.immagine_url" class="img-fluid" alt="{{ wine.nome }}" />
     </div>
     <div class="col-md-6">
       <h1>{{ wine.nome }}</h1>
       <p>{{ wine.descrizione }}</p>
       <ul clas="list-unstyled">
-        <li>Annata: {{ wine.annata }}</li>
-        <li>Provenienza: {{ wine.provenienza }}</li>
-        <li>Tipo: {{ wine.tipo }}</li>
+        <li>Annata:<i class="bi bi-calendar-event"></i> {{ wine.annata }}</li>
+        <li>Provenienza:<i class="bi bi-globe2"></i> {{ wine.provenienza }}</li>
+        <li>Tipo:<i class="bi bi-tag"></i> {{ wine.tipo }}</li>
         <li>Prezzo: {{ wine.prezzo | currency : valuta }}</li>
         <li>
           Casa Vinicola:
           <a href="{{ wine.casa_vinicola_url }}">{{ wine.casa_vinicola }}</a>
         </li>
       </ul>
-      <button class="btn btn-primary">
-        Aggiungi al carrello
-      </button>
+      <button class="btn btn-primary">Aggiungi al carrello</button>
     </div>
   </div>
 </div>

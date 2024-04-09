@@ -32,6 +32,17 @@
       "nome": "mario",
       "cognome": "mari",
       "id": 4
+    },
+    {
+      "email": "prova@test.it",
+      "password": "$2a$10$QymspNvad5uofbkmspb6O.igTtSuQ4kyvfH2W0JYLnqMcUebjUAYK",
+      "nome": "simone",
+      "cognome": "iengo",
+      "vendorOrNot": true,
+      "nomeAzienda": "Prova",
+      "pIva": "1234567890",
+      "sedeLegale": "Viale milano 10",
+      "id": 5
     }
   ],
   "wines": [

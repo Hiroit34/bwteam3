@@ -21,7 +21,7 @@ import { HomeModule } from './pages/home/home.module';
     FaqComponent,
     HeaderComponent,
     FooterComponent,
-    AddWineComponent
+    AddWineComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,9 +30,9 @@ import { HomeModule } from './pages/home/home.module';
     FormsModule,
     HttpClientModule,
     NgbCollapseModule,
-    HomeModule
- ],
+    HomeModule,
+  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

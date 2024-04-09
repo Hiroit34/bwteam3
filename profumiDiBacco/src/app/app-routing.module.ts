@@ -33,6 +33,7 @@ const routes: Routes = [
     path: 'faq',
     component: FaqComponent
   },
+  { path: 'details', loadChildren: () => import('./pages/details/details.module').then(m => m.DetailsModule) },
 ];
 
 @NgModule({

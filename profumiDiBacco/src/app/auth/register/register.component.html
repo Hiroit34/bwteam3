@@ -2,10 +2,20 @@
   <form>
     <input type="text" name="nome" [(ngModel)]="registerData.nome" class="form-control" placeholder="Nome">
     <input type="text" name="cognome" [(ngModel)]="registerData.cognome" class="form-control" placeholder="Cognome">
-    <input type="email" name="email" [(ngModel)]="registerData.email" class="form-control" placeholder="email">
+    <input type="email" name="email" [(ngModel)]="registerData.email" class="form-control" placeholder="Email">
     <input type="password" name="password" [(ngModel)]="registerData.password" class="form-control"
-      placeholder="password">
+      placeholder="Password">
+
+    <!-- Campi visibili solo se la checkbox è spuntata -->
+    <input *ngIf="registerData.vendorOrNot" type="text" name="company" [(ngModel)]="registerData.nomeAzienda"
+      class="form-control" placeholder="Nome Azienda">
+    <input *ngIf="registerData.vendorOrNot" type="text" name="vat" [(ngModel)]="registerData.pIva" class="form-control"
+      placeholder="Partita IVA">
+    <input *ngIf="registerData.vendorOrNot" type="text" name="address" [(ngModel)]="registerData.sedeLegale"
+      class="form-control" placeholder="Indirizzo">
     <input [(ngModel)]="registerData.vendorOrNot" name="vendorOrNot" type="checkbox">
-    <button (click)="signUp()" class="btn btn-success">Registrati</button>
+    <span class="ms-2">Sei un venditore?</span>
+
+    <button (click)="signUp()" class="btn btn-success d-block">Registrati</button>
   </form>
 </div>

@@ -14,10 +14,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule)
   },
   {
-    path: 'seller-profile',
-    loadChildren: () => import('./pages/seller-profile/seller-profile.module').then(m => m.SellerProfileModule)
-  },
-  {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },

@@ -1,1 +1,34 @@
-<p>faq works!</p>
+<div class="my-5 border-top border-bottom border-dark text-center">
+
+  <h1 class="mb-4">Frequently Asked Questions</h1>
+
+  <h5>All'interno di questa pagina troverete delle domande frequenti che i nostri utenti ci hanno fatto.</h5>
+
+</div>
+
+<div class="row text-center justify-content-center mb-5">
+<div  *ngFor="let item of domandeVino; let i = index">
+
+  <button
+  type="button"
+  class="btn btn-outline-primary my-2 col-12"
+  (click)="collapse.toggle()"
+  [attr.aria-expanded]="!buttonCollapsed[i]"
+  aria-controls="collapseExample"
+    >
+  {{item.domanda}}
+</button>
+
+<div #collapse="ngbCollapse" [(ngbCollapse)]="buttonCollapsed[i]">
+  <div class="card">
+    <div class="card-body">{{item.risposta}}</div>
+  </div>
+</div>
+
+</div>
+
+<h3 class="mt-5">Se cerchi un contatto più diretto con noi clicca qui e <a routerLink="/contatti">contattaci</a>!</h3>
+</div>
+<h5>Altrimenti lasciaci una domanda qui sotto e ricevi al più presto una risposta!</h5>
+<textarea class="col-12" name="questions" id="questions" cols="30" rows="5"></textarea>
+<button id="invia" (click)="redirect()" class="btn btn-primary col-12">Invia domanda e torna alla home!</button>

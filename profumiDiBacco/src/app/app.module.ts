@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,7 +11,7 @@ import { FooterComponent } from './main-components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddWineComponent } from './main-components/add-wine/add-wine.component';
-import { WineCardComponent } from './main-components/wine-card/wine-card.component';
+import { HomeModule } from './pages/home/home.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { WineCardComponent } from './main-components/wine-card/wine-card.compone
     FaqComponent,
     HeaderComponent,
     FooterComponent,
-    WineCardComponent,
     AddWineComponent
   ],
   imports: [
@@ -31,7 +29,8 @@ import { WineCardComponent } from './main-components/wine-card/wine-card.compone
     NgbModule,
     FormsModule,
     HttpClientModule,
-    NgbCollapseModule
+    NgbCollapseModule,
+    HomeModule
  ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,6 +23,12 @@
                       <h6>email</h6>
                       <p class="text-muted">{{user?.email}}</p>
                     </div>
+                    <div class="col-12 mb-3">
+                      <h6 *ngIf="user?.vendorOrNot">Dati aziendali</h6>
+                      <p *ngIf="user?.vendorOrNot" class="text-muted"> P.IVA: {{user?.pIva}}</p>
+                      <p *ngIf="user?.vendorOrNot" class="text-muted">Presso: {{user?.sedeLegale}}</p>
+                      <p *ngIf="user?.vendorOrNot" class="text-muted">Nome Cantina: {{user?.nomeAzienda}}</p>
+                    </div>
                   </div>
                 </div>
               </div>

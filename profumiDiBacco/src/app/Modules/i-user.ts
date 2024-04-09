@@ -8,4 +8,7 @@ export interface IUser {
   password?: string;
   vendorOrNot: boolean;
   favoriteWine: IWine[];
+  pIva?: number
+  nomeAzienda?: string
+  sedeLegale?: string
 }

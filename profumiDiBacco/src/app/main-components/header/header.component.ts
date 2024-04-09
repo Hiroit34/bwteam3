@@ -15,8 +15,10 @@ export class HeaderComponent implements OnInit{
   logged:boolean= false
 
 
-  search(query: string){
-    this.searchService.changeSearchQuery(query)
+  search(event: Event){
+    const query = (event.target as HTMLInputElement).value;
+    this.searchService.changeSearchQuery(query);
+    
   }
 
 

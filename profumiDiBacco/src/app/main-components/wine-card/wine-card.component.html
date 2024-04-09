@@ -1,1 +1,17 @@
-<p>wine-card works!</p>
+<div class="card" style="width: 18rem">
+  <img [src]="wine.immagine_url" class="card-img-top" />
+  <div class="card-body">
+    <h5 class="card-title">{{ wine.nome }}</h5>
+    <p class="card-text">{{ wine.descrizione }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Annata: {{ wine.annata }}</li>
+    <li class="list-group-item">Tipo: {{ wine.tipo }}</li>
+    <li class="list-group-item">Prezzo: {{ wine.prezzo }} €</li>
+    <li class="list-group-item">
+      Casa Vinicola:
+      <a [href]="wine.casa_vinicola_url">{{ wine.casa_vinicola }}</a>
+    </li>
+  </ul>
+  <button type="button" class="btn btn-primary" [routerLink]="['/details', wine.id]" >Dettagli</button>
+</div>

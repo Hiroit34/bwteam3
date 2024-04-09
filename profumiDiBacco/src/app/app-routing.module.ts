@@ -7,31 +7,41 @@ import { FaqComponent } from './pages/faq/faq.component';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'profile',
-    loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule)
+    loadChildren: () =>
+      import('./pages/profile/profile.module').then((m) => m.ProfileModule),
   },
   {
     path: 'seller-profile',
-    loadChildren: () => import('./pages/seller-profile/seller-profile.module').then(m => m.SellerProfileModule)
+    loadChildren: () =>
+      import('./pages/seller-profile/seller-profile.module').then(
+        (m) => m.SellerProfileModule
+      ),
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: 'contatti',
-    component: ContattiComponent
+    component: ContattiComponent,
   },
   {
     path: 'chi-siamo',
-    component: ChiSiamoComponent
+    component: ChiSiamoComponent,
   },
   {
     path: 'faq',
-    component: FaqComponent
+    component: FaqComponent,
+  },
+  {
+    path: 'details/:id',
+    loadChildren: () =>
+      import('./pages/details/details.module').then((m) => m.DetailsModule),
   },
   { path: 'edit', loadChildren: () => import('./pages/edit/edit.module').then(m => m.EditModule) },
   { path: 'create', loadChildren: () => import('./pages/create/create.module').then(m => m.CreateModule) },
@@ -39,6 +49,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

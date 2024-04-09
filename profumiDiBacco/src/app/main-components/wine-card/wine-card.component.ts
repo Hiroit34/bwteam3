@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IWine } from '../../Modules/i-wine';
+
 
 @Component({
   selector: 'app-wine-card',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './wine-card.component.scss'
 })
 export class WineCardComponent {
+ @Input() wine!: IWine;
+ 
+constructor (){}
+
 
 }

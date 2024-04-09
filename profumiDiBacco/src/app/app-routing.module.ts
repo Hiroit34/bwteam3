@@ -43,8 +43,21 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/details/details.module').then((m) => m.DetailsModule),
   },
-  { path: 'edit', loadChildren: () => import('./pages/edit/edit.module').then(m => m.EditModule) },
-  { path: 'create', loadChildren: () => import('./pages/create/create.module').then(m => m.CreateModule) },
+  {
+    path: 'edit',
+    loadChildren: () =>
+      import('./pages/edit/edit.module').then((m) => m.EditModule),
+  },
+  {
+    path: 'create',
+    loadChildren: () =>
+      import('./pages/create/create.module').then((m) => m.CreateModule),
+  },
+  {
+    path: 'details',
+    loadChildren: () =>
+      import('./pages/details/details.module').then((m) => m.DetailsModule),
+  },
 ];
 
 @NgModule({

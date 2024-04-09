@@ -7,9 +7,9 @@
       <h1>{{ wine.nome }}</h1>
       <p>{{ wine.descrizione }}</p>
       <ul clas="list-unstyled">
-        <li>Annata:<i class="bi bi-calendar-event"></i> {{ wine.annata }}</li>
-        <li>Provenienza:<i class="bi bi-globe2"></i> {{ wine.provenienza }}</li>
-        <li>Tipo:<i class="bi bi-tag"></i> {{ wine.tipo }}</li>
+        <li><i class="bi bi-calendar-event">Annata:</i> {{ wine.annata }}</li>
+        <li><i class="bi bi-globe2"></i>Provenienza: {{ wine.provenienza }}</li>
+        <li><i class="bi bi-tag"></i>Tipo: {{ wine.tipo }}</li>
         <li>Prezzo: {{ wine.prezzo | currency : valuta }}</li>
         <li>
           Casa Vinicola:

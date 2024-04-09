@@ -6,22 +6,25 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrl: './details.component.scss'
+  styleUrl: './details.component.scss',
 })
-export class DetailsComponent implements OnInit{
+export class DetailsComponent implements OnInit {
+  valuta: string = 'EUR';
 
-  
+  wine!: IWine;
 
- wine!: IWine;
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
- constructor(private route: ActivatedRoute, private http: HttpClient) { }
-
- ngOnInit(): void {
+  ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.http.get<IWine>(`http://localhost:3000/wines/${id}`).subscribe(wine => { this.wine = wine; });
- }
+    this.http
+      .get<IWine>(`http://localhost:3000/wines/${id}`)
+      .subscribe((wine) => {
+        this.wine = wine;
+      });
+  }
 
- addToCart(wine: IWine){
-   console.log('Aggiunto al carrello: ', wine.nome);
- }
+  addToCart(wine: IWine) {
+    console.log('Aggiunto al carrello: ', wine.nome);
+  }
 }

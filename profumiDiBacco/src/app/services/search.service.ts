@@ -9,7 +9,7 @@ import { IWine } from '../Modules/i-wine';
 export class SearchService {
 
   private url = 'http://localhost:3000/wines';
-  private searchQuery = new BehaviorSubject<string>(''); // permette l'aggiornamento della query di ricerca  
+  public searchQuery = new BehaviorSubject<string>(''); // permette l'aggiornamento della query di ricerca  
   currentSearchQuery = this.searchQuery.asObservable(); // permette di osservare la query di ricerca corrente 
   constructor (private http: HttpClient) {}
 

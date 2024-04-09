@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   wines!: Observable<IWine[]>;
   results: IWine[] = []; // Explicitly type results as an array of IWine objects
-  constructor(private http: HttpClient, private searchService: SearchService) {}
+  constructor(private http: HttpClient, public searchService: SearchService) {}
 
   ngOnInit() {
     this.wines = this.http.get<IWine[]>('http://localhost:3000/wines');

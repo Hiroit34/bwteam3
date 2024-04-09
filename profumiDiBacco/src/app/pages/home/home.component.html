@@ -17,20 +17,7 @@
 <div class="container>">
     <div class="row">
         <div class="col-md-6 col-lg-3" *ngFor="let wine of wines | async">
-            <div class="card" style="width: 18rem;">
-                <img [src]="wine.immagine_url" class="card-img-top" >
-                <div class="card-body">
-                    <h5 class="card-title">{{wine.nome}}</h5>
-                    <p class="card-text">{{wine.descrizione}}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Annata: {{wine.anno}}</li>
-                    <li class="list-group-item">Tipo: {{wine.tipo}}</li>
-                    <li class="list-group-item">Prezzo: {{wine.prezzo}} €</li>
-                    <li class="list-group-item">Casa Vinicola: <a [href]="wine.casa_vinicola_url">{{wine.casa_vinicola}}</a></li>
-                </ul>
-                <button type="button" class="btn btn-primary">Dettagli</button>
-            </div>
+            <app-wine-card [wine]="wine"></app-wine-card>
         </div>
     </div>
 </div>

@@ -9,7 +9,6 @@ import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { HeaderComponent } from './main-components/header/header.component';
 import { FooterComponent } from './main-components/footer/footer.component';
-import { WineCardComponent } from './main-components/wine-card/wine-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -21,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
     FaqComponent,
     HeaderComponent,
     FooterComponent,
-    WineCardComponent
   ],
   imports: [
     BrowserModule,

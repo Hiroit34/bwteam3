@@ -1,5 +1,4 @@
 export interface IWine {
-anno: any;
   id?: number;
   nome: string;
   annata: number;

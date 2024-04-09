@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IWine } from '../../Modules/i-wine';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-wine-card',
@@ -9,4 +10,10 @@ import { IWine } from '../../Modules/i-wine';
 export class WineCardComponent {
  @Input() wine!: IWine;
  
+constructor (private router: Router){}
+
+ goToDetails(wine: IWine):void{
+  this.router.navigate(['/details', wine.id]);
+}
+
 }

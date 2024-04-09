@@ -17,7 +17,16 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.http.get<IWine>(`http://localhost:3000/wines/${id}`).subscribe((wine) => {this.wine = wine;});
+    if (id) {
+      this.http.get<IWine>(`http://localhost:3000/wines/${id}`).subscribe(
+        (wine) => {
+          this.wine = wine;
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    }
   }
 
   addToCart(wine: IWine) {

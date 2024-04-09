@@ -39,7 +39,7 @@ const routes: Routes = [
     component: FaqComponent,
   },
   {
-    path: 'details',
+    path: 'details/:id',
     loadChildren: () =>
       import('./pages/details/details.module').then((m) => m.DetailsModule),
   },

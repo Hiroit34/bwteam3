@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { IWine } from '../Modules/i-wine';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth/auth.service';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { AuthService } from '../auth/auth.service';
 export class FavoritesService {
   private favorites: IWine[] = [];
   private dbUrl = 'http://localhost:3000/users';
+  private favoritesUrl = 'http://localhost:3000/favorites'
   constructor(
     private http: HttpClient,
     private authService: AuthService
@@ -34,6 +36,10 @@ export class FavoritesService {
      if(userId){
         this.http.patch(`${this.dbUrl}/${userId}`, {favoriteWine: this.favorites}).subscribe();
      }
+  }
+
+  setFavorites(favorites: IWine[]): void {
+    this.favorites = favorites;
   }
 
   getFavorites(): IWine[]{

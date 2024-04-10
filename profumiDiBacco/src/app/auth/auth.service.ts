@@ -6,7 +6,6 @@ import { environment } from '../../environments/environment.development';
 import { ILogin } from '../Modules/i-login';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { FavoritesService } from '../services/favorites.service';
 import { IWine } from '../Modules/i-wine';
 
 
@@ -30,7 +29,6 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private favoritesService: FavoritesService,
   ) { }
 
   registerUrl: string = environment.registerUrl;
@@ -48,6 +46,8 @@ export class AuthService {
         localStorage.setItem('accessData', JSON.stringify(data));
         localStorage.setItem('infoUser',JSON.stringify(data.user))
 
+        const user: IUser = JSON.parse(localStorage.getItem('infoUser') || '{}');
+        const favoriteWines: IWine[] = user.favoriteWine;
 
 
         this.autoLogout(data.accessToken);

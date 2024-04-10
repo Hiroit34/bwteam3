@@ -1,3 +1,120 @@
-ul {
-  list-style-type: none;
+.vh-100 {
+  height: 100vh;
+}
+
+.card-custom {
+  max-width: 40vw;
+  height: 50vh;
+  //border: none;
+}
+
+/* Se l'immagine è ancora troppo grande, potresti non aver bisogno di questa classe */
+.image-container img {
+  height: auto; /* Mantiene l'immagine proporzionata */
+  max-height: 100%; /* Impedisce che l'immagine superi l'altezza della card */
+  width: auto; /* Adatta la larghezza in base all'altezza per mantenere le proporzioni */
+  max-width: 100%; /* Impedisce che l'immagine superi la larghezza del suo contenitore */
+}
+
+.button {
+  padding: 12px 25px;
+  background: #fff;
+  border: 1px solid #900707;
+  color: #900707;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  z-index: -100;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #900707;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 440px;
+  height: 600px;
+  background-color: #fffdf2;
+  padding-inline: 3rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: #fffdf2;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1000;
+  .img-fluid.rounded-start {
+    height: 70%;
+    display: block;
+  }
+}
+
+.book:hover .cover {
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-83.7deg);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
 }

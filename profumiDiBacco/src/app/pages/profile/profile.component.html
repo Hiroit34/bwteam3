@@ -29,7 +29,7 @@
                       <p *ngIf="user?.vendorOrNot" class="text-muted">Presso: {{user?.sedeLegale}}</p>
                       <p *ngIf="user?.vendorOrNot" class="text-muted">Nome Cantina: {{user?.nomeAzienda}}</p>
                     </div>
-                    <button *ngIf="vendor" class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+                    <button *ngIf="vendor" class="btn btn-lg btn-outline-primary" (click)="open(content)">Crea nuovo prodotto</button>
                   </div>
                 </div>
               </div>
@@ -54,15 +54,15 @@
     <form>
       <div class="mb-3">
         <label for="nome" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="nome" [(ngModel)]="newWine.nome" placeholder="Nome del vino">
+        <input type="text" required name="nome" class="form-control" id="nome" [(ngModel)]="newWine.nome" placeholder="Nome del vino">
       </div>
       <div class="mb-3">
         <label for="annata" class="form-label">Annata</label>
-        <input type="number" class="form-control" id="annata" [(ngModel)]="newWine.annata" placeholder="Anno di produzione">
+        <input type="number" required name="annata" class="form-control" id="annata" [(ngModel)]="newWine.annata" placeholder="Anno di produzione">
       </div>
 
       <div>
-        <input type="number" [(ngModel)]="newWine.prezzo" placeholder="Prezzo">
+        <input type="number" required [(ngModel)]="newWine.prezzo" name="prezzo" placeholder="Prezzo">
         <select [(ngModel)]="selectedCurrency">
           <option value="EUR">EUR</option>
           <option value="USD">USD</option>
@@ -71,39 +71,43 @@
 
       <div class="mb-3">
         <label for="tipo" class="form-label">Tipo</label>
-        <input type="text" class="form-control" id="tipo" [(ngModel)]="newWine.tipo" placeholder="Tipo di vino">
+        <input type="text" required name="tipo" class="form-control" id="tipo" [(ngModel)]="newWine.tipo" placeholder="Tipo di vino">
       </div>
 
       <div class="mb-3">
         <label for="provenienza" class="form-label">Provenienza</label>
-        <input type="text" class="form-control" id="provenienza" [(ngModel)]="newWine.provenienza" placeholder="Provenienza del vino">
+        <input type="text" required name="provenienza" class="form-control" id="provenienza" [(ngModel)]="newWine.provenienza" placeholder="Provenienza del vino">
       </div>
 
       <div class="mb-3">
         <label for="casa_vinicola" class="form-label">Casa Vinicola</label>
-        <input type="text" class="form-control" id="casa_vinicola" [(ngModel)]="newWine.casa_vinicola" placeholder="Casa vinicola">
+        <input type="text" required name="casa_vinicola" class="form-control" id="casa_vinicola" [(ngModel)]="newWine.casa_vinicola" placeholder="Casa vinicola">
+      </div>
+      <div class="mb-3">
+        <label for="casa_vinicola" class="form-label">Link Sito Casa Vinicola</label>
+        <input type="text" required name="casa_vinicola_url" class="form-control" id="casa_vinicola" [(ngModel)]="newWine.casa_vinicola_url" placeholder="Casa vinicola">
       </div>
       <div class="mb-3">
         <label for="vino_image" class="form-label">Immagine del Vino</label>
-        <input type="text" class="form-control" id="vino_image" [(ngModel)]="newWine.immagine_url">
+        <input type="text" required name="immagine_url" class="form-control" id="vino_image" [(ngModel)]="newWine.immagine_url">
       </div>
 
 
       <div class="mb-3">
-        <label for="descrizione" class="form-label">Descrizione</label>
-        <textarea class="form-control" id="descrizione" [(ngModel)]="newWine.descrizione" placeholder="Descrizione del vino"></textarea>
+        <label for="descrizione"  class="form-label">Descrizione</label>
+        <textarea required class="form-control" name="descrizione" id="descrizione" [(ngModel)]="newWine.descrizione" placeholder="Descrizione del vino"></textarea>
       </div>
 
     </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="c()">Annulla</button>
-    <button type="button" class="btn btn-primary" (click)="addNewWine()">Salva</button>
+    <button type="button" class="btn btn-primary" (click)="addNewWine(newWine)">Salva</button>
   </div>
 </ng-template>
 
 <section>
-  <h3 class="mt-5"> Vini Preferiti Utente:</h3>
+  <h3 *ngIf="!vendor" class="mt-5"> Vini Preferiti Utente:</h3>
   <div class="row">
     <div class="col" *ngFor="let wine of user?.addedWine">
       <div class="card mb-3">

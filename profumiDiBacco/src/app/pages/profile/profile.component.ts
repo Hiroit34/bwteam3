@@ -6,6 +6,7 @@ import { UserService } from '../../services/user.service';
 import { AuthService } from '../../auth/auth.service';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { IUser } from '../../Modules/i-user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -19,20 +20,38 @@ export class ProfileComponent {
   newWine:Partial<IWine> = {}
   selectedCurrency: string = 'EUR';
 
-  constructor(private http: HttpClient,
-              private authSvc: AuthService,
+  constructor(private authSvc: AuthService,
               private userService: UserService,
               config: NgbModalConfig,
               private modalService: NgbModal,
-              private CrudService:CrudService) {
-    this.authSvc.user$.subscribe(res => this.user = res || undefined)
-    config.backdrop = 'static';
-    config.keyboard = false;
+              private CrudService:CrudService,
+            private route:Router
+            )
+               {
+
+
+    const infoUser= localStorage.getItem('infoUser')
+
+    if(!infoUser){
+
+      route.navigate(['/auth/login'])
+    }else{
+
+
+
+      this.user = JSON.parse(infoUser)
+
+    }
+
+
   }
 
   vendor: boolean | undefined = false;
 
   ngOnInit() {
+
+
+
     this.vendor = this.user?.vendorOrNot;
   }
 
@@ -43,17 +62,14 @@ export class ProfileComponent {
 
 
 
-  addNewWine() {
-    this.CrudService.addWine(this.newWine as IWine).subscribe(response => {
-      if (this.user && this.user.addedWine) {
-        this.user.addedWine.push(response);
-        // Aggiorna la lista degli utenti
-        // Non hai fornito il codice per il metodo 'updateUserList' del 'UserService'
-        // Quindi puoi chiamarlo come necessario per aggiornare la lista degli utenti
-      }
+  addNewWine(newWine:Partial<IWine>) {
+
+    this.CrudService.addWine(newWine).subscribe()
+
+
       this.modalService.dismissAll();
-    });
+    }
   }
-}
+
 
 

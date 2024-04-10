@@ -1,3 +1,4 @@
+import { CrudService } from './../../services/crud.service';
 import { Component } from '@angular/core';
 import { IWine } from '../../Modules/i-wine';
 import { HttpClient } from '@angular/common/http';
@@ -14,23 +15,16 @@ import { IUser } from '../../Modules/i-user';
 })
 export class ProfileComponent {
   user: IUser | undefined;
-  newWine: IWine = {
-    id: 0,
-    nome: '',
-    annata: 0,
-    provenienza: '',
-    tipo: '',
-    prezzo: 0,
-    casa_vinicola: '',
-    descrizione: ''
-  };
+
+  newWine:Partial<IWine> = {}
   selectedCurrency: string = 'EUR';
 
   constructor(private http: HttpClient,
               private authSvc: AuthService,
               private userService: UserService,
               config: NgbModalConfig,
-              private modalService: NgbModal) {
+              private modalService: NgbModal,
+              private CrudService:CrudService) {
     this.authSvc.user$.subscribe(res => this.user = res || undefined)
     config.backdrop = 'static';
     config.keyboard = false;
@@ -46,24 +40,20 @@ export class ProfileComponent {
     this.modalService.open(content);
   }
 
-  onVinoImageSelected(event: any) {
 
-  }
-
-  onCasaVinicolaImageSelected(event: any) {
-  }
 
 
   addNewWine() {
-    if (this.user?.vendorOrNot && this.user.id && this.newWine) {
-      this.http.post<IWine>(`http://localhost:3000/wines`, this.newWine).subscribe(response => {
-        if (this.user && this.user.addedWine) {
-          this.user.addedWine.push(response);
-          this.userService.updateUserList(); // Aggiorna la lista degli utenti
-        }
-        this.modalService.dismissAll();
-      });
-    }
+    this.CrudService.addWine(this.newWine as IWine).subscribe(response => {
+      if (this.user && this.user.addedWine) {
+        this.user.addedWine.push(response);
+        // Aggiorna la lista degli utenti
+        // Non hai fornito il codice per il metodo 'updateUserList' del 'UserService'
+        // Quindi puoi chiamarlo come necessario per aggiornare la lista degli utenti
+      }
+      this.modalService.dismissAll();
+    });
   }
-
 }
+
+

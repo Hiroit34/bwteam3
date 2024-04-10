@@ -6,7 +6,7 @@ export interface IWine {
   tipo: string;
   prezzo: number;
   casa_vinicola: string;
-  casa_vinicola_url?: string;
-  immagine_url?: string; 
+  casa_vinicola_url: string;
+  immagine_url?: string;
   descrizione: string;
 }

@@ -84,12 +84,8 @@
         <input type="text" class="form-control" id="casa_vinicola" [(ngModel)]="newWine.casa_vinicola" placeholder="Casa vinicola">
       </div>
       <div class="mb-3">
-        <label for="casa_vinicola_image" class="form-label">Immagine Casa Vinicola</label>
-        <input type="file" class="form-control" id="casa_vinicola_image" (change)="onCasaVinicolaImageSelected($event)">
-      </div>
-      <div class="mb-3">
         <label for="vino_image" class="form-label">Immagine del Vino</label>
-        <input type="file" class="form-control" id="vino_image" (change)="onVinoImageSelected($event)">
+        <input type="text" class="form-control" id="vino_image" [(ngModel)]="newWine.immagine_url">
       </div>
 
 

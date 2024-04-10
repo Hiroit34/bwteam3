@@ -14,4 +14,5 @@
     </li>
   </ul>
   <button type="button" class="btn btn-primary" [routerLink]="['/details', wine.id]">Dettagli</button>
-  <button type="button" class="btn btn-secondary" (click)="favoritesService.addtoFavorites(wine)"><i class="fas fa-heart"></i>Aggiungi ai Preferiti</button>
+  <button type="button" class="btn btn-secondary" (click)="favoritesService.addtoFavorites(wine)" *ngIf="!favoritesService.isFavorite(wine)"><i class="fas fa-heart"></i>Preferiti</button>
+  <button type="button" class="btn btn-secondary" (click)="favoritesService.removeFromFavorites(wine)" *ngIf="favoritesService.isFavorite(wine)"><i class="fas fa-heart favorites"></i>Preferiti</button>

@@ -42,7 +42,45 @@
       "nomeAzienda": "Prova",
       "pIva": "1234567890",
       "sedeLegale": "Viale milano 10",
-      "id": 5
+      "id": 5,
+      "favoriteWine": [
+        {
+          "id": 1,
+          "nome": "Brunello di Montalcino",
+          "annata": 2015,
+          "provenienza": "Toscana",
+          "tipo": "rosso",
+          "prezzo": 59.99,
+          "casa_vinicola": "Banfi",
+          "casa_vinicola_url": "https://www.banfi.it/",
+          "immagine_url": "https://banfiit.cdn-immedia.net/upload/assets/files/1944,-1,1242/1429-3.png",
+          "descrizione": "Il Brunello di Montalcino è un vino rosso italiano rinomato, prodotto nella regione della Toscana. È noto per il suo colore rubino intenso e il gusto complesso, che offre sfumature di frutti rossi, spezie e note terrose. Ha un corpo pieno e un'elegante struttura tannica."
+        },
+        {
+          "id": 6,
+          "nome": "Barbera d'Asti",
+          "annata": 2017,
+          "provenienza": "Piemonte",
+          "tipo": "rosso",
+          "prezzo": 24.99,
+          "casa_vinicola": "Vietti",
+          "casa_vinicola_url": "https://www.vietti.com/",
+          "immagine_url": "https://www.vietti.com/wp-content/uploads/barbera-asti-tre-vigne-vietti.jpg",
+          "descrizione": "La Barbera d'Asti è un vino rosso robusto e fruttato, prodotto nella regione del Piemonte. Di colore rosso rubino intenso, offre un bouquet di frutti rossi maturi e spezie. Al palato è pieno e avvolgente, con tannini morbidi e una piacevole freschezza."
+        },
+        {
+          "id": 7,
+          "nome": "Soave Classico",
+          "annata": 2019,
+          "provenienza": "Veneto",
+          "tipo": "bianco",
+          "prezzo": 19.99,
+          "casa_vinicola": "Pieropan",
+          "casa_vinicola_url": "https://www.pieropan.it/",
+          "immagine_url": "https://cdn.shopify.com/s/files/1/2577/6436/products/Pieropan_SoaveClassico_2020_1200x.jpg?v=1621442984",
+          "descrizione": "Lo Soave Classico è un vino bianco del Veneto caratterizzato da un colore giallo paglierino brillante. Con aromi di fiori bianchi, frutta tropicale e mandorla, offre una piacevole freschezza e un gusto equilibrato. Ideale come aperitivo o accompagnamento a piatti di pesce."
+        }
+      ]
     }
   ],
   "wines": [

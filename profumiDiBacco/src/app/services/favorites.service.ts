@@ -14,6 +14,10 @@ export class FavoritesService {
     private authService: AuthService
   ) { }
 
+  isFavorite(wine: IWine): boolean {
+    return this.favorites.some(favoriteWine => favoriteWine.id === wine.id);
+  }
+
   addtoFavorites(wine: IWine): void{
     const isFavorite = this.favorites.some(favoriteWine => favoriteWine.id === wine.id)
 

@@ -21,6 +21,7 @@ export class FavoritesService {
   }
 
   getFavorites(): IWine[]{
+    console.log(getUserId())
     return this.favorites;  
   }
 

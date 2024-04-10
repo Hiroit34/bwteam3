@@ -28,16 +28,6 @@ export class UserService {
     return this.http.get<IUser[]>(this.userUrl)
   }
 
-  getUserId(): number | undefined{
-    const userString = localStorage.getItem('currentUser');
-    if(userString){
-      const user = JSON.parse(userString);
-      console.log(user.id)
-      return user.id
-    
-    }
-    return undefined
-  }
 
   updateUserList(): void {
     this.getAllUser().subscribe(res => { this.userSubject.next(res) })

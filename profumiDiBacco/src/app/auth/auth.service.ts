@@ -88,6 +88,14 @@ export class AuthService {
     this.autoLogout(accessData.accessToken);
   }
 
+  getUserId(): number | undefined {
+    const userJson = localStorage.getItem('infoUser');
+    if (!userJson) return undefined;
+
+    const user: IUser = JSON.parse(userJson);
+    return user.id;
+  }
+
   errors(err: any) {
     switch (err.error) {
       case 'Email and Password are required':

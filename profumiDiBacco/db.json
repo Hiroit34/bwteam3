@@ -65,7 +65,55 @@
       "nomeAzienda": "efcewv",
       "pIva": "evcev3",
       "sedeLegale": "v3evr3",
-      "id": 7
+      "id": 7},{
+
+      "email": "simone.giarnera@gmail.com",
+      "password": "$2a$10$iEOvBo/EHhJSh1bIOczpmeXfNrAxysURfpGZDfgjLL3bfN9fRWVAO",
+      "nome": "Simone",
+      "cognome": "Giarnera",
+      "vendorOrNot": true,
+      "nomeAzienda": "sasasa",
+      "listaVini": [
+        {
+          "id": 1,
+          "nome": "Brunello di Montalcino",
+          "annata": 2015,
+          "provenienza": "Toscana",
+          "tipo": "rosso",
+          "prezzo": 59.99,
+          "casa_vinicola": "Banfi",
+          "casa_vinicola_url": "https://www.banfi.it/",
+          "immagine_url": "https://banfiit.cdn-immedia.net/upload/assets/files/1944,-1,1242/1429-3.png",
+          "descrizione": "Il Brunello di Montalcino è un vino rosso italiano rinomato, prodotto nella regione della Toscana. È noto per il suo colore rubino intenso e il gusto complesso, che offre sfumature di frutti rossi, spezie e note terrose. Ha un corpo pieno e un'elegante struttura tannica."
+        },
+        {
+          "id": 2,
+          "nome": "Amarone della Valpolicella",
+          "annata": 2016,
+          "provenienza": "Veneto",
+          "tipo": "rosso",
+          "prezzo": 79.99,
+          "casa_vinicola": "Masi",
+          "casa_vinicola_url": "https://www.masi.it/",
+          "immagine_url": "https://data.negoziodelvino.it/imgprodotto/amarone-della-valpolicella-classico-costasera-2016-docg_10040.jpg",
+          "descrizione": "L'Amarone della Valpolicella è un vino rosso italiano di grande prestigio. Prodotto nella regione del Veneto, è caratterizzato da un processo di appassimento delle uve che conferisce al vino un sapore ricco e complesso, con note di frutta matura, spezie e un caratteristico retrogusto amarognolo."
+        },
+        {
+          "id": 3,
+          "nome": "Chardonnay",
+          "annata": 2018,
+          "provenienza": "Lombardia",
+          "tipo": "bianco",
+          "prezzo": 29.99,
+          "casa_vinicola": "Ca' del Bosco",
+          "casa_vinicola_url": "https://www.cadelbosco.com/",
+          "immagine_url": "https://lieblings-weine.de/wp-content/uploads/2018/01/ca_del_bosco_chardonnay_lieblings-weine.de_.jpg",
+          "descrizione": "Il Chardonnay è un vino bianco classico, apprezzato per la sua versatilità e raffinatezza. Originario della Borgogna, presenta note fruttate e floreali, accompagnate da una piacevole freschezza e una leggera cremosità. Ideale per accompagnare piatti di pesce e pollame."
+        }
+      ],
+      "pIva": "123456",
+      "sedeLegale": "Via San Sebastiano 1/D",
+      "id": 5
     }
   ],
   "wines": [

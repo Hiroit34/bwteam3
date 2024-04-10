@@ -3,31 +3,47 @@
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-lg-6 mb-4 mb-lg-0">
-          <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="card mb-3" style="border-radius: 0.5rem">
             <div class="row g-0">
-              <div class="col-md-4 gradient-custom text-center"
-                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="Avatar"
-                  class="profile-img img-fluid my-5" />
+              <div
+                class="col-md-4 gradient-custom text-center"
+                style="
+                  border-top-left-radius: 0.5rem;
+                  border-bottom-left-radius: 0.5rem;
+                "
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                  alt="Avatar"
+                  class="profile-img img-fluid my-5"
+                />
               </div>
               <div class="col-md-8">
                 <div class="card-body p-4">
                   <h6>Informazioni</h6>
-                  <hr class="mt-0 mb-4">
+                  <hr class="mt-0 mb-4" />
                   <div class="row pt-1">
                     <div class="col-6 mb-3">
                       <h6>Nome</h6>
-                      <p class="text-muted">{{user?.nome}} {{user?.cognome}}</p>
+                      <p class="text-muted">
+                        {{ user?.nome }} {{ user?.cognome }}
+                      </p>
                     </div>
                     <div class="col-6 mb-3">
                       <h6>email</h6>
-                      <p class="text-muted">{{user?.email}}</p>
+                      <p class="text-muted">{{ user?.email }}</p>
                     </div>
                     <div class="col-12 mb-3">
                       <h6 *ngIf="user?.vendorOrNot">Dati aziendali</h6>
-                      <p *ngIf="user?.vendorOrNot" class="text-muted"> P.IVA: {{user?.pIva}}</p>
-                      <p *ngIf="user?.vendorOrNot" class="text-muted">Presso: {{user?.sedeLegale}}</p>
-                      <p *ngIf="user?.vendorOrNot" class="text-muted">Nome Cantina: {{user?.nomeAzienda}}</p>
+                      <p *ngIf="user?.vendorOrNot" class="text-muted">
+                        P.IVA: {{ user?.pIva }}
+                      </p>
+                      <p *ngIf="user?.vendorOrNot" class="text-muted">
+                        Presso: {{ user?.sedeLegale }}
+                      </p>
+                      <p *ngIf="user?.vendorOrNot" class="text-muted">
+                        Nome Cantina: {{ user?.nomeAzienda }}
+                      </p>
                     </div>
                     <button *ngIf="vendor" class="btn btn-lg btn-outline-primary" (click)="open(content)">Crea nuovo prodotto</button>
                   </div>
@@ -42,8 +58,33 @@
   <section>
     <h3 class="mt-5">Preferiti:</h3>
   </section>
-
-  <!-- <app-wine-card *ngFor="let item of list" [wine]="wine"></app-wine-card> -->
+  <div class="row">
+    <div class="col-6" *ngFor="let wine of listaVini">
+      <div class="card" style="width: 18rem">
+        <img [src]="wine.immagine_url" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ wine.nome }}</h5>
+          <p class="card-text">{{ wine.descrizione }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Annata: {{ wine.annata }}</li>
+          <li class="list-group-item">Tipo: {{ wine.tipo }}</li>
+          <li class="list-group-item">Prezzo: {{ wine.prezzo }} €</li>
+          <li class="list-group-item">
+            Casa Vinicola:
+            <a [href]="wine.casa_vinicola_url">{{ wine.casa_vinicola }}</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="btn btn-primary"
+          [routerLink]="['/details', wine.id]"
+        >
+          Dettagli
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">

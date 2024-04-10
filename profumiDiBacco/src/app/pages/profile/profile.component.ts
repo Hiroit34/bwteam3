@@ -7,6 +7,7 @@ import { AuthService } from '../../auth/auth.service';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { IUser } from '../../Modules/i-user';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-profile',
@@ -21,6 +22,8 @@ export class ProfileComponent {
   selectedCurrency: string = 'EUR';
 
   listaVini:IWine[]=[]
+
+  wineUrl:string= environment.winesUrl
 
   constructor(
     private authSvc: AuthService,
@@ -73,5 +76,22 @@ export class ProfileComponent {
             this.user.addedWine = this.user.addedWine.filter(wine => wine.id.toString() !== wineId);
         }
     });
+
+
+}
+
+openEditModal(edit:any,wine:IWine) {
+
+  this.newWine = wine
+  const modalRef = this.modalService.open(edit);
+  modalRef.componentInstance.wine = this.newWine// Passa l'oggetto vino alla modale
+}
+
+editWine(wine:Partial<IWine>){
+
+  this.http.put(this.wineUrl+'/'+wine.id,wine).subscribe()
+
+  this.modalService.dismissAll()
+
 }
 }

@@ -13,5 +13,5 @@
       <a [href]="wine.casa_vinicola_url">{{ wine.casa_vinicola }}</a>
     </li>
   </ul>
-  <button type="button" class="btn btn-primary" [routerLink]="['/details', wine.id]" >Dettagli</button>
-</div>
+  <button type="button" class="btn btn-primary" [routerLink]="['/details', wine.id]">Dettagli</button>
+  <button type="button" class="btn btn-secondary" (click)="favoritesService.addtoFavorites(wine)"><i class="fas fa-heart"></i>Aggiungi ai Preferiti</button>

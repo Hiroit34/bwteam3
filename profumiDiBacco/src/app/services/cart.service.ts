@@ -32,6 +32,7 @@ export class CartService {
    this.cart.next(currentCart);
   }
 
+
   removeFromCart(wine: IWine){
     const currentCart = this.cart.value;
     const itemIndex = currentCart.findIndex(item => item.wine.id === wine.id);

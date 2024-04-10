@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IWine } from '../../Modules/i-wine';
+import { FavoritesService } from '../../services/favorites.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { IWine } from '../../Modules/i-wine';
 export class WineCardComponent {
  @Input() wine!: IWine;
  
-constructor (){}
+constructor (public favoritesService: FavoritesService){}
 
 
 }

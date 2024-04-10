@@ -76,13 +76,14 @@ export class ProfileComponent {
 
   addNewWine() {
     if (this.user?.vendorOrNot && this.user.id && this.newWine) {
-      this.http.post<any>(`/api/users/${this.user.id}/wines`, this.newWine).subscribe(response => {
+      this.http.post<any>(`http://localhost:3000/wines`, this.newWine).subscribe(response => {
         if (this.user && this.user.favoriteWine) {
           this.user.favoriteWine.push(response);
-          this.userService.updateUserList(); // Aggiornamento della lista degli utenti
+          this.userService.updateUserList(); // Update the user list
         }
         this.modalService.dismissAll();
       });
     }
   }
+
 }

@@ -109,7 +109,7 @@
 <section>
   <h3 *ngIf="!vendor" class="mt-5"> Vini Preferiti Utente:</h3>
   <div class="row">
-    <div class="col" *ngFor="let wine of user?.addedWine">
+    <div class="col" *ngFor="let wine of listaVini">
       <div class="card mb-3">
         <img [src]="wine.immagine_url" class="card-img-top" alt="...">
         <div class="card-body">
@@ -117,6 +117,8 @@
           <p class="card-text">{{ wine.descrizione }}</p>
           <p class="card-text"><small class="text-muted">Prezzo: {{ wine.prezzo }} {{ selectedCurrency }}</small></p>
         </div>
+
+        <button type="button" class="btn btn-danger" (click)="deleteWine(wine.id.toString())">Delete</button>
       </div>
     </div>
   </div>

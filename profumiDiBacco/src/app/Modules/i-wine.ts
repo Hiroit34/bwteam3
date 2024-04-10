@@ -9,4 +9,5 @@ export interface IWine {
   casa_vinicola_url: string;
   immagine_url?: string;
   descrizione: string;
+  userId:number
 }

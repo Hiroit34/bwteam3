@@ -12,43 +12,43 @@ import { Router } from '@angular/router';
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
-  providers: [NgbModalConfig, NgbModal]
+  providers: [NgbModalConfig, NgbModal],
 })
 export class ProfileComponent {
   user: IUser | undefined;
 
-  newWine:Partial<IWine> = {}
+  newWine: Partial<IWine> = {};
   selectedCurrency: string = 'EUR';
 
-  constructor(private authSvc: AuthService,
-              private userService: UserService,
-              config: NgbModalConfig,
-              private modalService: NgbModal,
-              private CrudService:CrudService,
-            private route:Router
-            )
-               {
+  listaVini:IWine[]=[]
 
+  constructor(
+    private authSvc: AuthService,
+    private userService: UserService,
+    config: NgbModalConfig,
+    private modalService: NgbModal,
+    private CrudService: CrudService,
+    private route: Router,
+    private http: HttpClient
+  ) {
+    const infoUser = localStorage.getItem('infoUser');
 
-    const infoUser= localStorage.getItem('infoUser')
-
-    if(!infoUser){
-
-      route.navigate(['/auth/login'])
-    }else{
-
-
-
-      this.user = JSON.parse(infoUser)
-
+    if (!infoUser) {
+      route.navigate(['/auth/login']);
+    } else {
+      this.user = JSON.parse(infoUser);
     }
-
-
   }
 
   vendor: boolean | undefined = false;
 
   ngOnInit() {
+    this.http.get<IWine[]>('http://localhost:3000/wines')
+    .subscribe(res=>{
+
+      this.listaVini=res.filter(el=> el.userId == this.user?.id)
+
+    })
 
 
 
@@ -59,17 +59,19 @@ export class ProfileComponent {
     this.modalService.open(content);
   }
 
+  addNewWine(newWine: Partial<IWine>) {
+    newWine.userId = this.user?.id;
 
+    this.CrudService.addWine(newWine).subscribe();
 
-
-  addNewWine(newWine:Partial<IWine>) {
-
-    this.CrudService.addWine(newWine).subscribe()
-
-
-      this.modalService.dismissAll();
-    }
+    this.modalService.dismissAll();
   }
 
-
-
+  deleteWine(wineId: string) {
+    this.CrudService.deleteWine(wineId).subscribe(() => {
+        if (this.user && this.user.addedWine) {
+            this.user.addedWine = this.user.addedWine.filter(wine => wine.id.toString() !== wineId);
+        }
+    });
+}
+}

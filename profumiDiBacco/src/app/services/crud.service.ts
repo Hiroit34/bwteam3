@@ -17,5 +17,11 @@ export class CrudService {
     return this.http.post<IWine>(environment.winesUrl, wine);
   }
 
+  deleteWine(wineId: string): Observable<void> {
+    const url = environment.winesUrl+'/'+wineId
+    return this.http.delete<void>(url);
+  }
+
+
 
 }

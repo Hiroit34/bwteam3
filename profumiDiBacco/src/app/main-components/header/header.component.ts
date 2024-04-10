@@ -13,6 +13,8 @@ export class HeaderComponent {
 
       this.logged = data
 
+
+
     // const token= this.authSvc.
 
     // if(!token){

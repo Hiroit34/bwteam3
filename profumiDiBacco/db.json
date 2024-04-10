@@ -45,40 +45,37 @@
       "id": 5,
       "favoriteWine": [
         {
-          "id": 8,
-          "nome": "Primitivo di Manduria",
-          "annata": 2018,
-          "provenienza": "Puglia",
-          "tipo": "rosso",
-          "prezzo": 29.99,
-          "casa_vinicola": "Tormaresca",
-          "casa_vinicola_url": "https://www.tormaresca.it/",
-          "immagine_url": "https://images.vivino.com/thumbs/S6zp2tn4Qdy6IkgRrS1HDg_pb_x600.png",
-          "descrizione": "Il Primitivo di Manduria è un vino rosso intenso e corposo originario della regione italiana della Puglia. Caratterizzato da aromi di frutti neri maturi, spezie e vaniglia, presenta un gusto ricco e rotondo, con tannini morbidi e una piacevole persistenza."
-        },
-        {
-          "id": 7,
-          "nome": "Soave Classico",
-          "annata": 2019,
-          "provenienza": "Veneto",
-          "tipo": "bianco",
-          "prezzo": 19.99,
-          "casa_vinicola": "Pieropan",
-          "casa_vinicola_url": "https://www.pieropan.it/",
-          "immagine_url": "https://cdn.shopify.com/s/files/1/2577/6436/products/Pieropan_SoaveClassico_2020_1200x.jpg?v=1621442984",
-          "descrizione": "Lo Soave Classico è un vino bianco del Veneto caratterizzato da un colore giallo paglierino brillante. Con aromi di fiori bianchi, frutta tropicale e mandorla, offre una piacevole freschezza e un gusto equilibrato. Ideale come aperitivo o accompagnamento a piatti di pesce."
-        },
-        {
-          "id": 6,
-          "nome": "Barbera d'Asti",
-          "annata": 2017,
+          "id": 4,
+          "nome": "Barbaresco",
+          "annata": 2014,
           "provenienza": "Piemonte",
           "tipo": "rosso",
-          "prezzo": 24.99,
-          "casa_vinicola": "Vietti",
-          "casa_vinicola_url": "https://www.vietti.com/",
-          "immagine_url": "https://www.vietti.com/wp-content/uploads/barbera-asti-tre-vigne-vietti.jpg",
-          "descrizione": "La Barbera d'Asti è un vino rosso robusto e fruttato, prodotto nella regione del Piemonte. Di colore rosso rubino intenso, offre un bouquet di frutti rossi maturi e spezie. Al palato è pieno e avvolgente, con tannini morbidi e una piacevole freschezza."
+          "prezzo": 69.99,
+          "casa_vinicola": "Gaja",
+          "casa_vinicola_url": "https://www.gaja.com/",
+          "immagine_url": "https://hedonism.co.uk/sites/default/files/vintner/vintner-images/HED92706.JPG",
+          "descrizione": "Il Barbaresco del Piemonte è un vino rosso elegante e complesso, prodotto con uve Nebbiolo nella regione delle Langhe. Presenta un colore rubino intenso e offre un bouquet di frutti rossi, spezie e note floreali. Ha una struttura tannica robusta e un lungo e persistente finale."
+        }
+      ]
+    },
+    {
+      "email": "nadia@semprebon.com",
+      "password": "$2a$10$4A0ck/Yyh3g5y/3i9vGScOJYTPYSt4KZ8PlP1sgLAnPnAGMUxLgfy",
+      "nome": "nadia",
+      "cognome": "semprebon",
+      "id": 6,
+      "favoriteWine": [
+        {
+          "id": 3,
+          "nome": "Chardonnay",
+          "annata": 2018,
+          "provenienza": "Lombardia",
+          "tipo": "bianco",
+          "prezzo": 29.99,
+          "casa_vinicola": "Ca' del Bosco",
+          "casa_vinicola_url": "https://www.cadelbosco.com/",
+          "immagine_url": "https://lieblings-weine.de/wp-content/uploads/2018/01/ca_del_bosco_chardonnay_lieblings-weine.de_.jpg",
+          "descrizione": "Il Chardonnay è un vino bianco classico, apprezzato per la sua versatilità e raffinatezza. Originario della Borgogna, presenta note fruttate e floreali, accompagnate da una piacevole freschezza e una leggera cremosità. Ideale per accompagnare piatti di pesce e pollame."
         }
       ]
     }

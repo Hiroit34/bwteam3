@@ -8,27 +8,23 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-
-  userUrl = environment.usersUrl
-  userArr!: IUser[]
-  userSubject = new BehaviorSubject<IUser[]>([])
-  $user = this.userSubject.asObservable()
+  userUrl = environment.usersUrl;
+  userArr!: IUser[];
+  userSubject = new BehaviorSubject<IUser[]>([]);
+  $user = this.userSubject.asObservable();
 
   constructor(private http: HttpClient) {
-
     this.getAllUser().subscribe(res => {
-      this.userSubject.next(res)
-      this.userArr = res
-    })
-
-
+      this.userSubject.next(res);
+      this.userArr = res;
+    });
   }
 
   getAllUser() {
-    return this.http.get<IUser[]>(this.userUrl)
+    return this.http.get<IUser[]>(this.userUrl);
   }
 
   updateUserList(): void {
-    this.getAllUser().subscribe(res => { this.userSubject.next(res) })
+    this.getAllUser().subscribe(res => { this.userSubject.next(res); });
   }
 }

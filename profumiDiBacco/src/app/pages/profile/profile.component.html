@@ -46,28 +46,62 @@
   <!-- <app-wine-card *ngFor="let item of list" [wine]="wine"></app-wine-card> -->
 </div>
 <ng-template #content let-c="close" let-d="dismiss">
-	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
-	</div>
-	<div class="modal-body">
-		<form>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Aggiungi prodotto</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" [(ngModel)]="newWine.nome" placeholder="Nome del vino">
+      </div>
+      <div class="mb-3">
+        <label for="annata" class="form-label">Annata</label>
+        <input type="number" class="form-control" id="annata" [(ngModel)]="newWine.annata" placeholder="Anno di produzione">
+      </div>
 
-      <!-- <input type="text" [(ngModel)]="" placeholder="">
-      <input type="number" [(ngModel)]="" placeholder="">
-      <input type="text" [(ngModel)]="" placeholder="">
-      <input type="text" [(ngModel)]="" placeholder="">
-      <input type="number" [(ngModel)]="" placeholder="">
-      <input type="text" [(ngModel)]="" placeholder="">
-      <input type="text" [(ngModel)]="" placeholder="">
-      <input type="text" [(ngModel)]="" placeholder="">
-      <input type="text" [(ngModel)]="" placeholder=""> -->
+      <div>
+        <input type="number" [(ngModel)]="newWine.prezzo" placeholder="Prezzo">
+        <select [(ngModel)]="selectedCurrency">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="tipo" class="form-label">Tipo</label>
+        <input type="text" class="form-control" id="tipo" [(ngModel)]="newWine.tipo" placeholder="Tipo di vino">
+      </div>
+      
+      <div class="mb-3">
+        <label for="provenienza" class="form-label">Provenienza</label>
+        <input type="text" class="form-control" id="provenienza" [(ngModel)]="newWine.provenienza" placeholder="Provenienza del vino">
+      </div>
+
+      <div class="mb-3">
+        <label for="casa_vinicola" class="form-label">Casa Vinicola</label>
+        <input type="text" class="form-control" id="casa_vinicola" [(ngModel)]="newWine.casa_vinicola" placeholder="Casa vinicola">
+      </div>
+      <div class="mb-3">
+        <label for="casa_vinicola_image" class="form-label">Immagine Casa Vinicola</label>
+        <input type="file" class="form-control" id="casa_vinicola_image" (change)="onCasaVinicolaImageSelected($event)">
+      </div>
+      <div class="mb-3">
+        <label for="vino_image" class="form-label">Immagine del Vino</label>
+        <input type="file" class="form-control" id="vino_image" (change)="onVinoImageSelected($event)">
+      </div>
 
 
+      <div class="mb-3">
+        <label for="descrizione" class="form-label">Descrizione</label>
+        <textarea class="form-control" id="descrizione" [(ngModel)]="newWine.descrizione" placeholder="Descrizione del vino"></textarea>
+      </div>
 
     </form>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="c()">Aggiungi prodotto</button>
-	</div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c()">Annulla</button>
+    <button type="button" class="btn btn-primary" (click)="addNewWine()">Salva</button>
+  </div>
 </ng-template>

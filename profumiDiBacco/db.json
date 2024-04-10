@@ -32,6 +32,17 @@
       "nome": "mario",
       "cognome": "mari",
       "id": 4
+    },
+    {
+      "email": "y.luminari@gmail.com",
+      "password": "$2a$10$WcdDyqqxQjSIi4m78tMCFOiGRQowqe4zscGd0H8Q2lO4USMwt2.lO",
+      "nome": "yoyo",
+      "cognome": "yoyo",
+      "vendorOrNot": true,
+      "nomeAzienda": "SIIIIIUM",
+      "pIva": "104",
+      "sedeLegale": "via delle Centoquattro n.104",
+      "id": 5
     }
   ],
   "wines": [

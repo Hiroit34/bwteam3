@@ -82,6 +82,8 @@
         >
           Dettagli
         </button>
+        <button type="button" class="btn btn-danger" (click)="deleteWine(wine.id.toString())">Delete</button>
+
       </div>
     </div>
   </div>
@@ -147,8 +149,8 @@
   </div>
 </ng-template>
 
-<section>
-  <h3 *ngIf="!vendor" class="mt-5"> Vini Preferiti Utente:</h3>
+<section *ngIf="!vendor">
+  <h3  class="mt-5"> Vini Preferiti Utente:</h3>
   <div class="row">
     <div class="col" *ngFor="let wine of listaVini">
       <div class="card mb-3">

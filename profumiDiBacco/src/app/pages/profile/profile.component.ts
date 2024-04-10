@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { IUser } from '../../Modules/i-user';
 import { IWine } from '../../Modules/i-wine';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../../services/user.service';
 import { AuthService } from '../../auth/auth.service';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
+import { IUser } from '../../Modules/i-user';
 
 @Component({
   selector: 'app-profile',
@@ -22,8 +22,6 @@ export class ProfileComponent {
     tipo: '',
     prezzo: 0,
     casa_vinicola: '',
-    casa_vinicola_url: '',
-    immagine_url: '',
     descrizione: ''
   };
   selectedCurrency: string = 'EUR';
@@ -49,37 +47,19 @@ export class ProfileComponent {
   }
 
   onVinoImageSelected(event: any) {
-    // Gestione della selezione dell'immagine del vino
-    const file = event.target.files[0];
-    if (file) {
-      // Esempio di caricamento dell'immagine
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        this.newWine.immagine_url = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
+
   }
 
   onCasaVinicolaImageSelected(event: any) {
-    // Gestione della selezione dell'immagine della casa vinicola
-    const file = event.target.files[0];
-    if (file) {
-      // Esempio di caricamento dell'immagine
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        this.newWine.casa_vinicola_url = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
   }
+
 
   addNewWine() {
     if (this.user?.vendorOrNot && this.user.id && this.newWine) {
-      this.http.post<any>(`http://localhost:3000/wines`, this.newWine).subscribe(response => {
-        if (this.user && this.user.favoriteWine) {
-          this.user.favoriteWine.push(response);
-          this.userService.updateUserList(); // Update the user list
+      this.http.post<IWine>(`http://localhost:3000/wines`, this.newWine).subscribe(response => {
+        if (this.user && this.user.addedWine) {
+          this.user.addedWine.push(response);
+          this.userService.updateUserList(); // Aggiorna la lista degli utenti
         }
         this.modalService.dismissAll();
       });

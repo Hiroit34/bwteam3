@@ -11,4 +11,5 @@ export interface IUser {
   pIva?: number
   nomeAzienda?: string
   sedeLegale?: string
+  addedWine: IWine[]
 }

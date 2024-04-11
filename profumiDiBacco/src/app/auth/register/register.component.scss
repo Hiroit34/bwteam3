@@ -19,8 +19,35 @@ input::placeholder {
   margin-bottom: 0.5rem;
 }
 
-.container .card form .btn-center {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
+.button {
+  padding: 12px 25px;
+  background: #fff;
+  border: 1px solid #198754;
+  color: #198754;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #198754;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover::after {
+  bottom: 0;
+  border-radius: 0;
 }

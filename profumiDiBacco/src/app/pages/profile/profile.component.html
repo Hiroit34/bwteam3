@@ -68,7 +68,6 @@
     </div>
   </section>
 
-  <section></section>
   <h3 class="mb-5">Preferiti:</h3>
   <div class="row">
     <div class="col-6">
@@ -124,140 +123,147 @@
   </div>
 </div>
 <ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Aggiungi prodotto</h4>
-    <button
-      type="button"
-      class="btn-close"
-      aria-label="Close"
-      (click)="d('Cross click')"
-    ></button>
-  </div>
-  <div class="modal-body">
-    <form>
-      <div class="mb-3">
-        <label for="nome" class="form-label">Nome</label>
-        <input
-          type="text"
-          required
-          name="nome"
-          class="form-control"
-          id="nome"
-          [(ngModel)]="newWine.nome"
-          placeholder="Nome del vino"
-        />
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Aggiungi prodotto</h4>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="d('Cross click')"
+        ></button>
       </div>
-      <div class="mb-3">
-        <label for="annata" class="form-label">Annata</label>
-        <input
-          type="number"
-          required
-          name="annata"
-          class="form-control"
-          id="annata"
-          [(ngModel)]="newWine.annata"
-          placeholder="Anno di produzione"
-        />
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input
+              type="text"
+              required
+              name="nome"
+              class="form-control rounded-5"
+              id="nome"
+              [(ngModel)]="newWine.nome"
+              placeholder="Nome del vino"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="annata" class="form-label">Annata</label>
+            <input
+              type="number"
+              required
+              name="annata"
+              class="form-control rounded-5"
+              id="annata"
+              [(ngModel)]="newWine.annata"
+              placeholder="Anno di produzione"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="prezzo" class="form-label">Prezzo</label>
+            <div class="input">
+              <input
+                type="number"
+                required
+                class="form-control rounded-5"
+                [(ngModel)]="newWine.prezzo"
+                name="prezzo"
+                placeholder="Prezzo"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo</label>
+            <input
+              type="text"
+              required
+              name="tipo"
+              class="form-control rounded-5"
+              id="tipo"
+              [(ngModel)]="newWine.tipo"
+              placeholder="Tipo di vino"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="provenienza" class="form-label">Provenienza</label>
+            <input
+              type="text"
+              required
+              name="provenienza"
+              class="form-control rounded-5"
+              id="provenienza"
+              [(ngModel)]="newWine.provenienza"
+              placeholder="Provenienza del vino"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="casa_vinicola" class="form-label">Casa Vinicola</label>
+            <input
+              type="text"
+              required
+              name="casa_vinicola"
+              class="form-control rounded-5"
+              id="casa_vinicola"
+              [(ngModel)]="newWine.casa_vinicola"
+              placeholder="Casa vinicola"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="casa_vinicola_url" class="form-label"
+              >Link Sito Casa Vinicola</label
+            >
+            <input
+              type="text"
+              required
+              name="casa_vinicola_url"
+              class="form-control rounded-5"
+              id="casa_vinicola_url"
+              [(ngModel)]="newWine.casa_vinicola_url"
+              placeholder="Casa vinicola"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="vino_image" class="form-label">Immagine del Vino</label>
+            <input
+              type="text"
+              required
+              name="immagine_url"
+              class="form-control rounded-5"
+              id="vino_image"
+              [(ngModel)]="newWine.immagine_url"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="descrizione" class="form-label">Descrizione</label>
+            <textarea
+              required
+              class="form-control rounded-5"
+              name="descrizione"
+              id="descrizione"
+              [(ngModel)]="newWine.descrizione"
+              placeholder="Descrizione del vino"
+            ></textarea>
+          </div>
+        </form>
       </div>
-
-      <div>
-        <input
-          type="number"
-          required
-          [(ngModel)]="newWine.prezzo"
-          name="prezzo"
-          placeholder="Prezzo"
-        />
-        <select [(ngModel)]="selectedCurrency">
-          <option value="EUR">EUR</option>
-          <option value="USD">USD</option>
-        </select>
-      </div>
-
-      <div class="mb-3">
-        <label for="tipo" class="form-label">Tipo</label>
-        <input
-          type="text"
-          required
-          name="tipo"
-          class="form-control"
-          id="tipo"
-          [(ngModel)]="newWine.tipo"
-          placeholder="Tipo di vino"
-        />
-      </div>
-
-      <div class="mb-3">
-        <label for="provenienza" class="form-label">Provenienza</label>
-        <input
-          type="text"
-          required
-          name="provenienza"
-          class="form-control"
-          id="provenienza"
-          [(ngModel)]="newWine.provenienza"
-          placeholder="Provenienza del vino"
-        />
-      </div>
-
-      <div class="mb-3">
-        <label for="casa_vinicola" class="form-label">Casa Vinicola</label>
-        <input
-          type="text"
-          required
-          name="casa_vinicola"
-          class="form-control"
-          id="casa_vinicola"
-          [(ngModel)]="newWine.casa_vinicola"
-          placeholder="Casa vinicola"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="casa_vinicola" class="form-label"
-          >Link Sito Casa Vinicola</label
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-dark rounded-5"
+          (click)="c()"
         >
-        <input
-          type="text"
-          required
-          name="casa_vinicola_url"
-          class="form-control"
-          id="casa_vinicola"
-          [(ngModel)]="newWine.casa_vinicola_url"
-          placeholder="Casa vinicola"
-        />
+          Annulla
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary rounded-5"
+          (click)="addNewWine(newWine)"
+        >
+          Salva
+        </button>
       </div>
-      <div class="mb-3">
-        <label for="vino_image" class="form-label">Immagine del Vino</label>
-        <input
-          type="text"
-          required
-          name="immagine_url"
-          class="form-control"
-          id="vino_image"
-          [(ngModel)]="newWine.immagine_url"
-        />
-      </div>
-
-      <div class="mb-3">
-        <label for="descrizione" class="form-label">Descrizione</label>
-        <textarea
-          required
-          class="form-control"
-          name="descrizione"
-          id="descrizione"
-          [(ngModel)]="newWine.descrizione"
-          placeholder="Descrizione del vino"
-        ></textarea>
-      </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="c()">
-      Annulla
-    </button>
-    <button type="button" class="btn btn-primary" (click)="addNewWine(newWine)">
-      Salva
-    </button>
+    </div>
   </div>
 </ng-template>
 

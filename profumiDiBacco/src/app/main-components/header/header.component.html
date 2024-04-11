@@ -87,7 +87,7 @@
         class="rounded-circle"
       />
     </a>
-    <ul class="dropdown-menu dropdown-menu-end text-small" [ngClass]="{show}">
+    <ul class="dropdown-menu dropdown-menu-end text-small" [class.show]="show">
       <li *ngIf="!logged">
         <a class="dropdown-item" routerLink="/auth/login">Login</a>
       </li>

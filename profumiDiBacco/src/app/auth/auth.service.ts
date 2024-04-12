@@ -27,7 +27,9 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private router: Router
-  ) { }
+  ) {
+    this.restoreUser()
+   }
 
   registerUrl: string = environment.registerUrl;
   loginUrl: string = environment.loginUrl;

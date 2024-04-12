@@ -34,13 +34,7 @@
         >Profile</a
       >
     </li>
-    <li>
-      <a
-        routerLink="/seller-profile"
-        class="nav-link px-2 fs-5 link-body-emphasis text-white"
-        >Customers</a
-      >
-    </li>
+
     <li>
       <a
         routerLink="/faq"
@@ -63,13 +57,9 @@
       >
     </li>
   </ul>
+
   <form class="ms-2 col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-    <input
-      type="search"
-      class="form-control"
-      placeholder="Search Wine"
-      aria-label="Search"
-    />
+    <input (input)="search($event)" type="search" class="form-control" placeholder="Cerca..." aria-label="Search" />
   </form>
 
   <div class="dropdown-menu-left text-end" bis_skin_checked="1">
@@ -89,23 +79,20 @@
     </a>
     <ul class="dropdown-menu dropdown-menu-end text-small" [class.show]="show">
       <li *ngIf="!logged">
-        <a class="dropdown-item" routerLink="/auth/login">Login</a>
+        <a (click)="show = !show" class="dropdown-item" routerLink="/auth/login">Login</a>
       </li>
       <li *ngIf="!logged">
-        <a class="dropdown-item" routerLink="/auth/register">Register</a>
+        <a (click)="show = !show" class="dropdown-item" routerLink="/auth/register">Register</a>
       </li>
       <li *ngIf="logged">
-        <a class="dropdown-item" routerLink="/profile">Profile</a>
+        <a (click)="show = !show" class="dropdown-item" routerLink="/profile">Profile</a>
       </li>
       <li>
         <hr class="dropdown-divider" />
       </li>
       <li *ngIf="logged">
-        <a (click)="logout()" class="dropdown-item">Sign out</a>
+        <a (click)="logout()" (click)="show = !show" class="dropdown-item">Sign out</a>
       </li>
     </ul>
   </div>
-  <form class="ms-2 col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-    <input (input)="search($event)" type="search" class="form-control" placeholder="Cerca..." aria-label="Search" />
-  </form>
 </div>

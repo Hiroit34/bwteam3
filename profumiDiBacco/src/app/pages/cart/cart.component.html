@@ -17,7 +17,7 @@
           <td>{{ item.wine.nome }}</td>
           <td>{{ item.wine.prezzo }}</td>
           <td>
-            <input type="number" [(ngModel)]="item.quantity" min="1" (change)="updateQuantity(item.wine, item.quantity)">
+            <input type="number"  [(ngModel)]="item.quantity" min="1" (change)="updateQuantity(item.wine, item.quantity)">
           </td>
           <td>{{ item.wine.prezzo * item.quantity }}</td>
           <td>

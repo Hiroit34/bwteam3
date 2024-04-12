@@ -1,22 +1,22 @@
 <app-banner></app-banner>
-<div class="background">
+<!-- <div class="background">
   <div class="row mx-5">
     <div class="col-md-6 col-lg-3" *ngFor="let wine of wines | async">
       <div class="container d-flex justify-content-center mt-5">
         <app-wine-card [wine]="wine"></app-wine-card>
       </div>
     </div>
-  </div>
-<hr>
-<div class="container">
-  <div class="row" *ngIf="searchService.searchQuery.value.length > 0 && results.length > 0">
+  </div> -->
+  <div class="container">
+    <div class="row" *ngIf="searchService.searchQuery.value.length > 0 && results.length > 0">
       <h2>I tuoi risultati</h2>
       <div class="col-md-6 col-lg-3" *ngFor="let result of results">
-          <app-wine-card [wine]="result"></app-wine-card>
+        <app-wine-card [wine]="result"></app-wine-card>
       </div>
-  </div>
-  <div class="row">
-      <div class="col-md-6 col-lg-3" *ngFor="let wine of wines | async">
+    </div>
+    <div class="row" *ngIf="searchService.searchQuery.value.length <= 1 ">
+      <h2>La nostra selezione di vini</h2>
+      <div  class="col-md-6 col-lg-3" *ngFor="let wine of wines | async">
           <app-wine-card [wine]="wine"></app-wine-card>
       </div>
   </div>

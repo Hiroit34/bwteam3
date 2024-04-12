@@ -1,7 +1,7 @@
 import { IWine } from './i-wine';
 
 export interface IUser {
-  id?: number;
+  id: number;
   nome: string;
   cognome: string;
   email: string;

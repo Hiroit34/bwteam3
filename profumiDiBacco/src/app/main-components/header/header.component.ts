@@ -1,7 +1,7 @@
 import { SearchService } from './../../services/search.service';
 import { Component, HostListener } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
-
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +12,7 @@ export class HeaderComponent {
   show: boolean = false;
   logged: boolean = false;
 
-  constructor(private authSvc: AuthService,public searchService:SearchService) {
+  constructor(private authSvc: AuthService,public searchService:SearchService, public cartService: CartService) {
     this.authSvc.isLoggedIn$.subscribe((data) => {
       this.logged = data;
     });

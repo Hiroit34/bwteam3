@@ -57,7 +57,13 @@
       >
     </li>
   </ul>
-
+  <a class="nav-link" routerLink="/cart">
+    <i class="bi bi-cart"></i> Carrello
+    <span *ngIf="cartService.getCartItemCount() > 0" class="badge bg-secondary">
+      {{ cartService.getCartItemCount() }}
+    </span>
+  </a>
+  
   <form class="ms-2 col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
     <input (input)="search($event)" type="search" class="form-control" placeholder="Cerca..." aria-label="Search" />
   </form>

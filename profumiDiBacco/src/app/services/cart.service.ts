@@ -13,6 +13,14 @@ interface ICartItem {
   providedIn: 'root'
 })
 export class CartService {
+getCartItemCount() {
+  const currentCart = this.cart.value;
+  let itemCount = 0;
+  for (let i = 0; i < currentCart.length; i++){
+    itemCount += currentCart[i].quantity;
+  }
+  return itemCount;
+}
 
   private cart = new BehaviorSubject<ICartItem[]>([]);
   currentCart = this.cart.asObservable();

@@ -87,3 +87,14 @@
     color: #999;
   }
 }
+
+.button1{
+
+  border: 1px solid #198754;
+  color: #46e016;
+
+}
+.button1::after {
+
+  background: #e01313;
+}

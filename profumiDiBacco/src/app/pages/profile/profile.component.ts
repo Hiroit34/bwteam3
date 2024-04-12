@@ -44,13 +44,15 @@ export class ProfileComponent {
 
     this.vendor = this.user?.vendorOrNot;
 
+  }
+
+  ngOnInit(){
     this.CrudService.$wines.subscribe((res) => {
-      if (res) {
+
         this.listaVini = res.filter((el) => el.userId == this.user?.id);
-      } else {
-        return;
-      }
-    });
+
+  });
+
   }
 
   vendor: boolean | undefined = false;
@@ -67,11 +69,11 @@ export class ProfileComponent {
     this.modalService.dismissAll();
   }
 
-  deleteWine(wineId: string) {
+  deleteWine(wineId: number) {
     this.CrudService.deleteWine(wineId).subscribe(() => {
       if (this.user && this.user.addedWine) {
         this.user.addedWine = this.user.addedWine.filter(
-          (wine) => wine.id.toString() !== wineId
+          (wine) => wine.id !== wineId
         );
       }
     });

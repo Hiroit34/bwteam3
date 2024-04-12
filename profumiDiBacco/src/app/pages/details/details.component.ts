@@ -29,7 +29,7 @@ export class DetailsComponent implements OnInit {
     }
   }
 
-  addToCart(wine: IWine) {
+  addToCart(wine: IWine, quantity: number = 1) {
     console.log('Aggiunto al carrello: ', wine.nome);
   }
 }

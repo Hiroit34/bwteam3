@@ -1,5 +1,7 @@
+import { SearchService } from './../../services/search.service';
 import { Component, HostListener } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
+
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,7 @@ export class HeaderComponent {
   show: boolean = false;
   logged: boolean = false;
 
-  constructor(private authSvc: AuthService) {
+  constructor(private authSvc: AuthService,public searchService:SearchService) {
     this.authSvc.isLoggedIn$.subscribe((data) => {
       this.logged = data;
     });
@@ -26,5 +28,11 @@ export class HeaderComponent {
 
   logout() {
     this.authSvc.logout();
+  }
+
+  search(event: Event){
+    const query = (event.target as HTMLInputElement).value;
+    this.searchService.changeSearchQuery(query);
+
   }
 }

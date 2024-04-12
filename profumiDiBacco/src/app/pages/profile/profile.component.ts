@@ -21,9 +21,9 @@ export class ProfileComponent {
   newWine: Partial<IWine> = {};
   selectedCurrency: string = 'EUR';
 
-  listaVini:IWine[]=[]
+  listaVini: IWine[] = [];
 
-  wineUrl:string= environment.winesUrl
+  wineUrl: string = environment.winesUrl;
 
   constructor(
     private authSvc: AuthService,
@@ -41,22 +41,19 @@ export class ProfileComponent {
     } else {
       this.user = JSON.parse(infoUser);
     }
+
+    this.vendor = this.user?.vendorOrNot;
+
+    this.CrudService.$wines.subscribe((res) => {
+      if (res) {
+        this.listaVini = res.filter((el) => el.userId == this.user?.id);
+      } else {
+        return;
+      }
+    });
   }
 
   vendor: boolean | undefined = false;
-
-  ngOnInit() {
-    this.http.get<IWine[]>('http://localhost:3000/wines')
-    .subscribe(res=>{
-
-      this.listaVini=res.filter(el=> el.userId == this.user?.id)
-
-    })
-
-
-
-    this.vendor = this.user?.vendorOrNot;
-  }
 
   open(content: any) {
     this.modalService.open(content);
@@ -72,26 +69,23 @@ export class ProfileComponent {
 
   deleteWine(wineId: string) {
     this.CrudService.deleteWine(wineId).subscribe(() => {
-        if (this.user && this.user.addedWine) {
-            this.user.addedWine = this.user.addedWine.filter(wine => wine.id.toString() !== wineId);
-        }
+      if (this.user && this.user.addedWine) {
+        this.user.addedWine = this.user.addedWine.filter(
+          (wine) => wine.id.toString() !== wineId
+        );
+      }
     });
+  }
 
+  openEditModal(edit: any, wine: IWine) {
+    this.newWine = wine;
+    const modalRef = this.modalService.open(edit);
+    modalRef.componentInstance.wine = this.newWine; // Passa l'oggetto vino alla modale
+  }
 
-}
+  editWine(wine: Partial<IWine>) {
+    this.http.put(this.wineUrl + '/' + wine.id, wine).subscribe();
 
-openEditModal(edit:any,wine:IWine) {
-
-  this.newWine = wine
-  const modalRef = this.modalService.open(edit);
-  modalRef.componentInstance.wine = this.newWine// Passa l'oggetto vino alla modale
-}
-
-editWine(wine:Partial<IWine>){
-
-  this.http.put(this.wineUrl+'/'+wine.id,wine).subscribe()
-
-  this.modalService.dismissAll()
-
-}
+    this.modalService.dismissAll();
+  }
 }

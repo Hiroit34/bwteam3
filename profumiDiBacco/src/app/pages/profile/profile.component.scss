@@ -14,7 +14,8 @@
 }
 
 .addwine-card {
-  height: 22rem;
+  height: 23.5rem;
+  box-sizing: border-box;
 }
 
 .card .img-container {
@@ -88,13 +89,15 @@
   }
 }
 
-.button1{
-
+.button1 {
   border: 1px solid #198754;
   color: #46e016;
-
 }
 .button1::after {
-
   background: #e01313;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 600px;
 }

@@ -1,10 +1,10 @@
-<div class="card rounded-5 mb-3" style="width: 18rem">
+<div class="card rounded-3 mb-3" style="width: 18rem">
   <div class="img-container mt-3">
     <img [src]="wine.immagine_url" class="card-img-top" />
   </div>
   <div class="card-body">
-    <h5 class="card-title text-center">{{ wine.nome }}</h5>
-    <p class="card-text text-center text-truncate">{{ wine.descrizione }}</p>
+    <h5 class="card-title text-center text-truncate">{{ wine.nome }}</h5>
+    <p class="card-text text-center text-truncate">{{ wine.prezzo }} €</p>
   </div>
   <div class="d-flex justify-content-center mb-4">
     <button type="button" class="button" [routerLink]="['/details', wine.id]">

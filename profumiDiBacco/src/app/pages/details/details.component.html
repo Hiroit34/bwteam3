@@ -59,7 +59,7 @@
           <a [href]="wine.casa_vinicola_url">{{ wine.casa_vinicola }}</a>
         </li>
       </ul>
-      <button routerLink="/cart" class="button">Aggiungi al carrello</button>
+      <button routerLink="/cart" class="button" (click)="addToCart(wine, 1)">Aggiungi al carrello</button>
     </div>
     <div class="cover">
       <h1 class="card-title">{{ wine.nome }}</h1>

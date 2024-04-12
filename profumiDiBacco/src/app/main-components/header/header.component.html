@@ -57,10 +57,23 @@
       >
     </li>
   </ul>
-  <div class="d-flex align-items-center justify-content-center gap-3">
-    <form
-      class="ms-2 col-5 col-lg-auto mb-3 mb-lg-0 me-lg-3 mt-3 mt-lg-0"
-      role="search"
+  <a class="nav-link" routerLink="/cart">
+    <i class="bi bi-cart"></i> Carrello
+    <span *ngIf="cartService.getCartItemCount() > 0" class="badge bg-secondary">
+      {{ cartService.getCartItemCount() }}
+    </span>
+  </a>
+
+  <form class="ms-2 col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+    <input (input)="search($event)" type="search" class="form-control" placeholder="Cerca..." aria-label="Search" />
+  </form>
+
+  <div class="dropdown-menu-left text-end" bis_skin_checked="1">
+    <a
+      (click)="show = !show"
+      class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
     >
       <input
         (input)="search($event)"

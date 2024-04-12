@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
+import { Router } from '@angular/router';
 import { IWine } from '../../Modules/i-wine';
+import { ICartITem } from '../../Modules/i-cart';
 
 @Component({
   selector: 'app-cart',
@@ -8,13 +10,13 @@ import { IWine } from '../../Modules/i-wine';
   styleUrl: './cart.component.scss'
 })
 export class CartComponent implements OnInit{
-  cartItems: {wine: IWine, quantity: number}[] = [];
+  cartItem: ICartITem[] = []
   
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
 
   ngOnInit() {
-    this.cartService.currentCart.subscribe(cart => this.cartItems = cart);
+    this.cartService.currentCart.subscribe(cart => this.cartItem = cart);
   }
 
   updateQuantity(wine: IWine, quantity: number){
@@ -28,5 +30,11 @@ export class CartComponent implements OnInit{
   getTotal(){
     return this.cartService.getTotal();
   } 
+
+  checkout() {
+    alert('Ordine effettuato. Controlla la tua email.');
+    this.cartService.clearCart();
+    this.router.navigate(['/']);
+  }
   
 }

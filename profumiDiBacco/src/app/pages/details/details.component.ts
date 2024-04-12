@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IWine } from '../../Modules/i-wine';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-details',
@@ -13,7 +14,7 @@ export class DetailsComponent implements OnInit {
 
   wine!: IWine;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient, private CartService: CartService) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -29,7 +30,8 @@ export class DetailsComponent implements OnInit {
     }
   }
 
-  addToCart(wine: IWine) {
-    console.log('Aggiunto al carrello: ', wine.nome);
+  addToCart(wine: IWine, quantity: number = 1) {
+    this.CartService.addToCart(wine, quantity);
+    console.log('Aggiunto al tuo carrello' , wine.nome);
   }
 }

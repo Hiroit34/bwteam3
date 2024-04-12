@@ -13,6 +13,14 @@ interface ICartItem {
   providedIn: 'root'
 })
 export class CartService {
+getCartItemCount() {
+  const currentCart = this.cart.value;
+  let itemCount = 0;
+  for (let i = 0; i < currentCart.length; i++){
+    itemCount += currentCart[i].quantity;
+  }
+  return itemCount;
+}
 
   private cart = new BehaviorSubject<ICartItem[]>([]);
   currentCart = this.cart.asObservable();
@@ -59,6 +67,10 @@ export class CartService {
     const total = currentCart.reduce((acc, item) => acc + item.wine.prezzo * item.quantity, 0);
     const discount = this.discount.value;
     return total * (1 -discount / 100);
-}
+  }
+
+  clearCart(){
+   this.cart.next([]);
+  }
 
 }

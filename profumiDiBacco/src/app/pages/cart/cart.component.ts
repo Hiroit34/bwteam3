@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
+import { Router } from '@angular/router';
 import { IWine } from '../../Modules/i-wine';
 import { ICartITem } from '../../Modules/i-cart';
 
@@ -11,7 +12,7 @@ import { ICartITem } from '../../Modules/i-cart';
 export class CartComponent implements OnInit{
   cartItem: ICartITem[] = []
   
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
 
   ngOnInit() {
@@ -29,5 +30,11 @@ export class CartComponent implements OnInit{
   getTotal(){
     return this.cartService.getTotal();
   } 
+
+  checkout() {
+    alert('Ordine effettuato. Controlla la tua email.');
+    this.cartService.clearCart();
+    this.router.navigate(['/']);
+  }
   
 }

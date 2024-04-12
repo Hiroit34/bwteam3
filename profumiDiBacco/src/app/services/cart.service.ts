@@ -59,6 +59,10 @@ export class CartService {
     const total = currentCart.reduce((acc, item) => acc + item.wine.prezzo * item.quantity, 0);
     const discount = this.discount.value;
     return total * (1 -discount / 100);
-}
+  }
+
+  clearCart(){
+   this.cart.next([]);
+  }
 
 }

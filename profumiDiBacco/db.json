@@ -126,6 +126,17 @@
       "pIva": "1234567890",
       "sedeLegale": "via UrAno 69",
       "id": 8
+    },
+    {
+      "email": "iengo.simone@gmail.com",
+      "password": "$2a$10$tjR8MI4w18.G5kIqwhQz1OwOntHfxjdXj6SKTECUjWEdMtqaZ2ijq",
+      "nome": "simone ",
+      "cognome": "iengo",
+      "vendorOrNot": true,
+      "nomeAzienda": "epicode",
+      "pIva": "123456789",
+      "sedeLegale": "via a. f. i. c.",
+      "id": 9
     }
   ],
   "wines": [

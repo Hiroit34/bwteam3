@@ -12,4 +12,5 @@ export interface IUser {
   nomeAzienda?: string
   sedeLegale?: string
   addedWine?: IWine[]
+  favoriteWine?: IWine[]
 }

@@ -1,43 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  show: boolean = false;
+  logged: boolean = false;
 
-  constructor(private authSvc:AuthService){
-    this.authSvc.isLoggedIn$.subscribe(data=>{
+  constructor(private authSvc: AuthService) {
+    this.authSvc.isLoggedIn$.subscribe((data) => {
+      this.logged = data;
+    });
+  }
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    const targetElement = event.target as HTMLElement;
 
-      this.logged = data
+    if (!targetElement.closest('.dropdown-menu-left') && this.show) {
+      this.show = false;
+    }
+  }
 
-
-
-    // const token= this.authSvc.
-
-    // if(!token){
-    //   this.logged = false
-    //   this.show=false
-    // }else{
-    //   this.logged=true
-    //   this.show = true
-    // }
-
-  // })
-})}
-  show: boolean = false
-
-  logged:boolean= false
-
-
-
-
-
-  logout(){
-
-    this.authSvc.logout()
-
+  logout() {
+    this.authSvc.logout();
   }
 }

@@ -1,11 +1,100 @@
 .main {
-
-    background-color: #f4f5f7;
+  background-color: #f4f5f7;
 }
 
 .profile-img {
+  width: 80px;
+}
 
-    width: 80px;
+.card {
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 0;
+}
 
+.addwine-card {
+  height: 22rem;
+}
 
+.card .img-container {
+  height: 200px; /* Altezza del contenitore dell'immagine */
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Allineamento verticale al centro */
+  justify-content: center; /* Allineamento orizzontale al centro */
+}
+
+.card .img-container img {
+  height: auto; /* Mantiene l'immagine proporzionata */
+  max-height: 100%; /* Assicura che l'immagine non sia più alta del contenitore */
+  width: auto; /* Mantiene l'immagine proporzionata */
+  max-width: 100%; /* Assicura che l'immagine non sia più larga del contenitore */
+  object-fit: contain; /* L'immagine sarà contenuta all'interno del blocco assegnato, mantenendo le proprie proporzioni */
+}
+
+/* Ridimensioniamo specificatamente l'SVG */
+.card .img-container img {
+  height: 250px; /* O la dimensione che ritieni più opportuna */
+  width: auto; /* Adatta la larghezza in base all'altezza per mantenere le proporzioni */
+}
+
+.button {
+  padding: 12px 25px;
+  background: #fff;
+  border: 1px solid #198754;
+  color: #198754;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #198754;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+.form-control {
+  width: 220px; // Potrebbe essere necessario regolare questa larghezza in base alla larghezza della modale
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 12px;
+  color: #999;
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.button1{
+
+  border: 1px solid #198754;
+  color: #46e016;
+
+}
+.button1::after {
+
+  background: #e01313;
 }

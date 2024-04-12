@@ -1,8 +1,6 @@
 <div
-  class="d-flex flex-wrap
-   align-items-center justify-content-center
-    justify-content-lg-start"
-    id="header"
+  class="d-flex flex-wrap align-items-center p-3 justify-content-center justify-content-lg-start"
+  id="header"
   bis_skin_checked="1"
 >
   <a
@@ -21,35 +19,60 @@
   </a>
 
   <ul
-    class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+    class="nav col-12 col-lg-auto gap-3 me-lg-auto mb-2 justify-content-center mb-md-0"
   >
-    <li><a routerLink="/" class="nav-link px-2 link-secondary">HOME</a></li>
     <li>
-      <a *ngIf="logged" routerLink="/profile" class="nav-link px-2 link-body-emphasis"
+      <a routerLink="/" class="nav-link px-2 fs-5 link-secondary text-white"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        *ngIf="logged"
+        routerLink="/profile"
+        class="nav-link px-2 fs-5 link-body-emphasis text-white"
         >Profile</a
       >
     </li>
     <li>
-      <a routerLink="/seller-profile" class="nav-link px-2 link-body-emphasis"
+      <a
+        routerLink="/seller-profile"
+        class="nav-link px-2 fs-5 link-body-emphasis text-white"
         >Customers</a
       >
     </li>
     <li>
-      <a routerLink="/faq" class="nav-link px-2 link-body-emphasis">FAQ</a>
+      <a
+        routerLink="/faq"
+        class="nav-link px-2 fs-5 link-body-emphasis text-white"
+        >FAQ</a
+      >
     </li>
     <li>
-      <a routerLink="/contatti" class="nav-link px-2 link-body-emphasis"
+      <a
+        routerLink="/contatti"
+        class="nav-link px-2 fs-5 link-body-emphasis text-white"
         >Contatti</a
       >
     </li>
     <li>
-      <a routerLink="/chi-siamo" class="nav-link px-2 link-body-emphasis"
-        >Chi siamo</a
+      <a
+        routerLink="/chi-siamo"
+        class="nav-link px-2 fs-5 link-body-emphasis text-white"
+        >Chi Siamo</a
       >
     </li>
   </ul>
+  <form class="ms-2 col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Search Wine"
+      aria-label="Search"
+    />
+  </form>
 
-  <div class="dropdown text-end" bis_skin_checked="1">
+  <div class="dropdown-menu-left text-end" bis_skin_checked="1">
     <a
       (click)="show = !show"
       class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
@@ -59,27 +82,27 @@
       <img
         src="https://github.com/mdo.png"
         alt="mdo"
-        width="32"
-        height="32"
+        width="40"
+        height="40"
         class="rounded-circle"
       />
     </a>
-    <ul class="dropdown-menu dropdown-menu-end text-small" [ngClass]="{show}">
-      <li *ngIf="!logged"><a class="dropdown-item" routerLink="/auth/login">Login</a></li>
-      <li *ngIf="!logged"><a class="dropdown-item" routerLink="/auth/register">Register</a></li>
-      <li *ngIf="logged"><a class="dropdown-item" routerLink="/profile">Profile</a></li>
+    <ul class="dropdown-menu dropdown-menu-end text-small" [class.show]="show">
+      <li *ngIf="!logged">
+        <a class="dropdown-item" routerLink="/auth/login">Login</a>
+      </li>
+      <li *ngIf="!logged">
+        <a class="dropdown-item" routerLink="/auth/register">Register</a>
+      </li>
+      <li *ngIf="logged">
+        <a class="dropdown-item" routerLink="/profile">Profile</a>
+      </li>
       <li>
         <hr class="dropdown-divider" />
       </li>
-      <li *ngIf="logged"><a (click)="logout()" class="dropdown-item" >Sign out</a></li>
+      <li *ngIf="logged">
+        <a (click)="logout()" class="dropdown-item">Sign out</a>
+      </li>
     </ul>
   </div>
-  <form class="ms-2 col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-    <input
-      type="search"
-      class="form-control"
-      placeholder="Search Wine"
-      aria-label="Search"
-    />
-  </form>
 </div>

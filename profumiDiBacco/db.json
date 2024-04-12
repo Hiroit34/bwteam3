@@ -33,17 +33,7 @@
       "cognome": "mari",
       "id": 4
     },
-    {
-      "email": "y.luminari@gmail.com",
-      "password": "$2a$10$WcdDyqqxQjSIi4m78tMCFOiGRQowqe4zscGd0H8Q2lO4USMwt2.lO",
-      "nome": "yoyo",
-      "cognome": "yoyo",
-      "vendorOrNot": true,
-      "nomeAzienda": "SIIIIIUM",
-      "pIva": "104",
-      "sedeLegale": "via delle Centoquattro n.104",
-      "id": 5
-    },
+
     {
       "email": "federicovendor@email.it",
       "password": "$2a$10$OuBq049tIVdFGDe6CobpM.SH1Yl.TMu8QZmwa5KEf3HPKP/ofaWui",
@@ -115,6 +105,24 @@
       "pIva": "123456",
       "sedeLegale": "Via San Sebastiano 1/D",
       "id": 5
+    },
+    {
+      "email": "nany@sempre.com",
+      "password": "$2a$10$DbvWd3QZHocPcTOH5MajeOZHAOF9.7IIJpYYNy/YM4/1Ye3XP0qQG",
+      "nome": "nadia",
+      "cognome": "semprebon",
+      "id": 8
+    },
+    {
+      "email": "nunzio@giallo.com",
+      "password": "$2a$10$vgQ42nMWc4MEcPk4kSYl8utom0VqGOM6I3VjbwV2BJiNFJt2908zC",
+      "nome": "nunzio",
+      "cognome": "giallo",
+      "vendorOrNot": true,
+      "nomeAzienda": "epicode",
+      "pIva": "0123456789",
+      "sedeLegale": "VIA GIOVANNI PIATTI",
+      "id": 9
     }
   ],
   "wines": [
@@ -261,19 +269,6 @@
       "casa_vinicola_url": "https://www.mastroberardino.com/",
       "immagine_url": "https://bilder.vinmonopolet.no/cache/1200x1200-0/4247001-1.jpg",
       "descrizione": "Il Greco di Tufo è un vino bianco del Sud Italia, della regione della Campania."
-    },
-    {
-      "nome": "Molestiae in aliquam",
-      "annata": 22,
-      "prezzo": 63,
-      "tipo": "Mollitia quis quo si",
-      "provenienza": "Autem placeat autem",
-      "casa_vinicola": "Voluptatem voluptate",
-      "casa_vinicola_url": "Perspiciatis at nos",
-      "immagine_url": "Eaque est sit ipsam",
-      "descrizione": "Aut non architecto e",
-      "userId": 5,
-      "id": 24
     }
   ]
 }

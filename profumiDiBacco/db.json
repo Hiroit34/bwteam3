@@ -115,17 +115,6 @@
       "pIva": "123456",
       "sedeLegale": "Via San Sebastiano 1/D",
       "id": 5
-    },
-    {
-      "email": "prova@test.it",
-      "password": "$2a$10$TQiXdDHo5xrJdkX2SvGgmucTmLriAIm/OAnKMCEbglbunZPbGp2oe",
-      "nome": "prova",
-      "cognome": "prova",
-      "vendorOrNot": true,
-      "nomeAzienda": "epicode",
-      "pIva": "1234567890",
-      "sedeLegale": "via UrAno 69",
-      "id": 8
     }
   ],
   "wines": [
@@ -289,7 +278,7 @@
     {
       "nome": "Molestiae in aliquam",
       "annata": 22,
-      "prezzo": 63,
+      "prezzo": 552222,
       "tipo": "Mollitia quis quo si",
       "provenienza": "Autem placeat autem",
       "casa_vinicola": "Voluptatem voluptate",

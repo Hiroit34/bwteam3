@@ -1,34 +1,41 @@
-<div class="my-5 border-top border-bottom border-dark text-center">
+<div class="container">
 
-  <h1 class="mb-4">Frequently Asked Questions</h1>
+  <div class="my-5 border-bottom text-center pb-4">
 
-  <h5>All'interno di questa pagina troverete delle domande frequenti che i nostri utenti ci hanno fatto.</h5>
+    <h1 class="mb-4 faq">Frequently Asked Questions</h1>
 
-</div>
+    <h5 class="under-faq">All'interno di questa pagina troverete delle domande frequenti che i nostri utenti ci hanno
+      fatto.</h5>
 
-<div class="row text-center justify-content-center mb-5">
-<div  *ngFor="let item of domandeVino; let i = index">
-
-  <button
-  type="button"
-  class="btn btn-outline-primary my-2 col-12"
-  (click)="collapse.toggle()"
-  [attr.aria-expanded]="!buttonCollapsed[i]"
-  aria-controls="collapseExample"
-    >
-  {{item.domanda}}
-</button>
-
-<div #collapse="ngbCollapse" [(ngbCollapse)]="buttonCollapsed[i]">
-  <div class="card">
-    <div class="card-body">{{item.risposta}}</div>
   </div>
-</div>
+
+  <div class="row text-center justify-content-center mb-5">
+    <div *ngFor="let item of domandeVino; let i = index">
+
+      <button type="button" class="my-2 col-12 rounded-5 button" (click)="collapse.toggle()"
+        [attr.aria-expanded]="!buttonCollapsed[i]" aria-controls="collapseExample">
+        {{item.domanda}}
+      </button>
+
+      <div #collapse="ngbCollapse" [(ngbCollapse)]="buttonCollapsed[i]">
+        <div class="card rounded-5 mb-4">
+          <div class="card-body">{{item.risposta}}</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="mt-5 ">Se cerchi un contatto più diretto con noi clicca qui e <a class="text-decoration-none link"
+        routerLink="/contatti">contattaci</a>!
+    </h3>
+  </div>
+  <h5>Altrimenti lasciaci una domanda qui sotto e ricevi al più presto una risposta!</h5>
+  <textarea class="col-12 rounded-5" name="questions" id="questions" cols="30" rows="5"></textarea>
+  <div class="row justify-content-end">
+    <div class="col-3 mt-3">
+      <button id="invia" (click)="redirect()" class="btn button1 rounded-5 col-12 mb-5">Invia</button>
+    </div>
+  </div>
+
 
 </div>
-
-<h3 class="mt-5">Se cerchi un contatto più diretto con noi clicca qui e <a routerLink="/contatti">contattaci</a>!</h3>
-</div>
-<h5>Altrimenti lasciaci una domanda qui sotto e ricevi al più presto una risposta!</h5>
-<textarea class="col-12" name="questions" id="questions" cols="30" rows="5"></textarea>
-<button id="invia" (click)="redirect()" class="btn btn-primary col-12">Invia domanda e torna alla home!</button>

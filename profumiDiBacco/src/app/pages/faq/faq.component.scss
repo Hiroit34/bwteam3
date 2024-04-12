@@ -1,0 +1,49 @@
+.button {
+  padding: 12px 25px;
+  background: #fff;
+  border: 1px solid #900707;
+  color: #900707;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #900707;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+.faq {
+  color: black;
+}
+
+.under-faq{
+  color: black;
+}
+
+.link {
+  color: #900707;
+}
+
+.button1 {
+  background-color: #900707;
+  color: white;
+}

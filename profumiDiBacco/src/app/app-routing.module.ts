@@ -14,8 +14,8 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule),
-    canActivate:[AuthGuard],
-    canActivateChild:[AuthGuard]
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard]
   },
   {
     path: 'auth',
@@ -40,8 +40,8 @@ const routes: Routes = [
   },
   {
 
-    path:'cart',
-    loadChildren:()=> import('./pages/cart/cart.module').then((m)=> m.CartModule)
+    path: 'cart',
+    loadChildren: () => import('./pages/cart/cart.module').then((m) => m.CartModule)
 
   }
 ];
